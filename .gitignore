@@ -3,7 +3,7 @@
 *\__pycache__
 
 *\cifar_data
-*\checkpoint\models
+*\checkpoint\*\models
 
 *.bcf
 *.xml
