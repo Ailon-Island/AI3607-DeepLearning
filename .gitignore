@@ -5,6 +5,7 @@
 *\cifar_data
 *\checkpoint\*\models
 *.pkl
+*.pth
 
 *.bcf
 *.xml
