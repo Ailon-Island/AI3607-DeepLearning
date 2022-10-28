@@ -1,0 +1,9 @@
+*.docx
+*\.idea
+*\__pycache__
+
+*\models
+
+*.bcf
+*.xml
+*.gz
