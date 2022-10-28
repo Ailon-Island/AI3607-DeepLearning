@@ -1,0 +1,80 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX program  = xelatex
+\documentclass[a4paper]{article}
+\usepackage{ctex}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry} %页边距
+\usepackage{helvet}
+\usepackage{amsmath, amsfonts, amssymb} % 数学公式、符号
+\usepackage[english]{babel}
+\usepackage{graphicx}   % 图片
+\usepackage{url}        % 超链接
+\usepackage{bm}         % 加粗方程字体
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tikz}%调用宏包tikz
+\usepackage{circuitikz}%调用宏包circuitikz
+\usepackage{enumerate}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{multicol}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{reference.bib}
+
+% Python listing
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\sffamily,
+keywordstyle=\textbf,
+commentstyle=\color{blue},
+showstringspaces=false, 
+numbers=left }}
+% Python environment
+\lstnewenvironment{python}[1][]{
+\pythonstyle \lstset{#1} }{}
+
+\newcommand{\threemetrics}[3]{\multirow{3}{*}{\shortstack[c]{$\textcolor{orange}{#1}$\\$\textcolor{blue}{#2}$\\$\textcolor{green}{#3}$}}}
+\newcommand{\twometrics}[2]{\multirow{2}{*}{\shortstack[c]{$\textcolor{blue}{#1}$\\$\textcolor{green}{#2}$}}}
+
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}       
+\renewcommand{\algorithmicensure}{ \textbf{Output:}} 
+%算法格式
+\usepackage{subfigure}
+\usepackage{fancyhdr} %设置页眉、页脚
+\usepackage{gensymb}
+
+\pagestyle{fancy}
+\lhead{MiniProject 3: Image Unpermutation, AI3607 Deep Learning and Its Application}
+\chead{}
+\rhead{蒋伟, 520030910149}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{全部实验结果详见 \texttt{\{2.Classification, 3.Permutation\}/checkpoint} 目录。}
+
+
+\usepackage{ifthen}
+\usepackage{xifthen}
+
+\newcommand{\dom}[1]{\mathop{\mathrm{dom}}\left(#1\right)}
+\newcommand{\rng}[1]{\mathop{\mathrm{rng}}\left(#1\right)}
+\newcommand{\preimg}[2][]{ \ifthenelse{\isempty{#1}}
+  {\mathop{\mathrm{preimage}}\left(#2\right)}
+  {\mathop{\mathrm{preimage}}_{#1}\left(#2\right)} }
+\newcommand{\set}[1]{\left\{#1\right\}}
+
+\newenvironment{proof}{{\par\noindent\it Proof.}\quad\par}{\hfill $\square$\par}  
+
+\begin{document}
+\section{目标任务}
+\begin{enumerate}
+    \item 将输入图片分割为 N 张子图片打乱输入，并将他们的正确排列作为输出，输出格式采用排列阵 P，第 i 行第 j 列若为 1 则代表图片 i 应该排在位置 j，每行每列最多有一个元素为 1。具体切分方式可以自行定义，但需要有相应的可视化效果说明自己的切分设计。
+    \item 设计一套针对图片拼接的神经网络，可以参考 DeepPermNet 的设计，即对每一个子图片过一个 CNN，将得到的特征进行拼接后过若干全连接网络后得到一个 N x N 的矩阵，通过 Sinkhorn 算法使其变成双随机矩阵 Q（每行每列的和固定为 1）作为神经网络的预测值。最后将预测值 Q（双随机矩阵）与真值 P（排列阵）作 Loss 后用于更新神经网络。
+    \item CNN 和 FC 网络等可以套用作业二中的代码，也可以自行设计新的网络。Sinkhorn算法我们推荐使用 pygmtools 中的 sinkhorn（后面大作业可能也需要用到pygmtools，可以提前熟悉一下）。
+    \item 在实现了图片拼接问题的网络以后，尝试能否把图片拼接作为一种预训练方式来更好的辅助作业二中的图片分类任务。
+\end{enumerate}
+
+\end{document}

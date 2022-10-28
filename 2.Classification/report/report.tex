@@ -1,0 +1,197 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX program  = xelatex
+\documentclass[a4paper]{article}
+\usepackage{ctex}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry} %页边距
+\usepackage{helvet}
+\usepackage{amsmath, amsfonts, amssymb} % 数学公式、符号
+\usepackage[english]{babel}
+\usepackage{graphicx}   % 图片
+\usepackage{url}        % 超链接
+\usepackage{bm}         % 加粗方程字体
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tikz}%调用宏包tikz
+\usepackage{circuitikz}%调用宏包circuitikz
+\usepackage{enumerate}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{multicol}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{reference.bib}
+
+% Python listing
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\sffamily,
+keywordstyle=\textbf,
+commentstyle=\color{blue},
+showstringspaces=false, 
+numbers=left }}
+% Python environment
+\lstnewenvironment{python}[1][]{
+\pythonstyle \lstset{#1} }{}
+
+\newcommand{\threemetrics}[3]{\multirow{3}{*}{\shortstack[c]{$\textcolor{orange}{#1}$\\$\textcolor{blue}{#2}$\\$\textcolor{green}{#3}$}}}
+\newcommand{\twometrics}[2]{\multirow{2}{*}{\shortstack[c]{$\textcolor{blue}{#1}$\\$\textcolor{green}{#2}$}}}
+
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}       
+\renewcommand{\algorithmicensure}{ \textbf{Output:}} 
+%算法格式
+\usepackage{subfigure}
+\usepackage{fancyhdr} %设置页眉、页脚
+\usepackage{gensymb}
+
+\pagestyle{fancy}
+\lhead{MiniProject 2: Image Classification, AI3607 Deep Learning and Its Application}
+\chead{}
+\rhead{蒋伟, 520030910149}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{全部实验结果详见 \texttt{./checkpoint} 目录。}
+
+
+\usepackage{ifthen}
+\usepackage{xifthen}
+
+\newcommand{\dom}[1]{\mathop{\mathrm{dom}}\left(#1\right)}
+\newcommand{\rng}[1]{\mathop{\mathrm{rng}}\left(#1\right)}
+\newcommand{\preimg}[2][]{ \ifthenelse{\isempty{#1}}
+  {\mathop{\mathrm{preimage}}\left(#2\right)}
+  {\mathop{\mathrm{preimage}}_{#1}\left(#2\right)} }
+\newcommand{\set}[1]{\left\{#1\right\}}
+
+\newenvironment{proof}{{\par\noindent\it Proof.}\quad\par}{\hfill $\square$\par}  
+
+\title{AI3607 Deep Learning and Its Application\\MiniProject 2: Image Classification}
+\author{\sffamily 蒋伟, F2003801, 520030910149}
+\date{(Dated: \today)}
+\begin{document}
+\section{目标任务}
+\begin{enumerate}
+    \item 利用神经网络完成 CIFAR-10 数据集的图像分类任务。
+    \item 将训练集划分，所有类别小于等于5的数据仅保留 10\%，剩余部分不变。重新训练，比较结果，并尝试改进。
+\end{enumerate}
+
+\section{CIFAR-10 数据集}
+数据集包含了 10 类不同物体的图片（$32\times 32$， RGB）和对应的类别标签。
+训练集中每类数据各 5,000 对，共 50,000 对数据；测试集中每类数据各 1,000 对，共计 10,000 对数据。
+
+为了对输入图片进行分类，模型的输入是 $32\times 32$ 大小的 RGB 图片，输出则为类别预测。
+
+\section{CIFAR-10 数据集图像分类}
+\subsection{网络结构}
+\subsubsection{ResNet50}
+首先，尝试了 ResNet50 \cite{resnet} 作为分类网络，效果优异，但是训练较慢，为更好地进行对比，故使用更简单的网络。
+\subsubsection{Simple Classifier}
+我设计了更简单的基于卷积的分类网络，其网络结构如下。它也能达到较好的效果。
+
+\begin{multicols}{2}
+    \begin{lstlisting}[language=Python, basicstyle=\ttfamily, numbers=left]
+nn.Conv2d(3, 64, 5)
+nn.BatchNorm2d(64)
+nn.ReLU()
+nn.MaxPool2d(2, 2)
+nn.Conv2d(64, 256, 5)
+nn.BatchNorm2d(256)
+nn.ReLU()
+nn.MaxPool2d(2, 2)
+nn.Linear(6400, 256)
+nn.ReLU()
+nn.Linear(256, 96)
+nn.ReLU()
+nn.Linear(96, 10)
+    \end{lstlisting}
+\end{multicols}
+
+\subsection{对抗过拟合}
+训练过程中出现明显过拟合（训练损失下降，测试损失不变），故尝试多种方法解决。其中包括数据增强（随机翻转，随机裁剪）和 weight decay。前者从数据层面，后者从参数层面，共同引导模型关注关键特征，提升泛化能力。
+
+\section{非平衡数据集（CIFAR-10 IMBAlanced）图像分类}
+数据划分后，不同类别间出现不平衡。且训练集和测试集分布偏移。直接训练会导致不同类的关注度差异较大，直接表现为放大的劣势类错误量带来的高测试错误率。
+\subsection{再平衡数据集（CIFAR-10 REBAlanced）}
+原计划使用带权交叉熵损失，对不同类的惩罚加权，从而平衡各类对模型的影响。但 \texttt{Jittor} 的带权交叉熵行为不稳定（实测全一权重和不输入权重的训练结果不同），此外也避免劣势类异常点导致梯度爆炸，就改为对劣势类过采样，使得训练集中各类别的数据量相同的方法。由此得到的数据集称为再平衡数据集。
+
+\subsection{重述：对抗过拟合}
+REBA 数据集中存在大量重复样本，因此极其容易过拟合。此时一方面采用数据增强增加样本多样性，另一方面采用 weight decay 限制参数的增长，在均等关注各类的同时保障模型的泛化能力。
+\section{实验结果}
+实验结果如表 \ref{tab:1}, \ref{tab:2}, \ref{tab:3} 所示，此外，在表 \ref{tab:3} 的设置下最佳的实验结果为 F.3+C 和 weight decay 为 $5e-3$ 的组合，训练损失 $0.5177$， 测试损失 $0.8331$，测试准确率 $\mathbf{72.73\%}$，比 IMBA 数据集的直接训练结果提升$10.64\%$。
+\begin{multicols}{2}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{ccc}
+            \hline
+            Model&ResNet50&Simple\\
+            \hline
+            Loss& $\mathbf{0.5786}$&$0.6540$\\
+            Acc.&$\mathbf{86.00\%}$&$78.20\%$\\
+            \hline
+            
+        \end{tabular}
+        \caption{Result of different models on CIFAR-10. Test losses and accuracies are reported.}
+        \label{tab:1}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{cccc}
+            \hline
+            Variation&Original&IMBA&REBA\\
+            \hline
+            Loss&$0.6540$&$1.4708$&$1.7856$\\
+            Acc.&$78.20\%$&$62.09\%$&$62.68\%$\\
+            \hline
+        \end{tabular}
+        \caption{Result on variations of CIFAR-10 with Simple Classifier.}
+        \label{tab:2}
+    \end{table}
+
+\end{multicols}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccccc}
+        \cline{3-7}
+        \multicolumn{2}{c}{\threemetrics{Train\ Loss}{Test\ Loss}{Test\ Acc.}}&\multicolumn{5}{c}{ Augmentation}\\
+        &&None&C&F.3+C&F.5+C&F.9+C\\
+        \cline{3-7}
+        \multicolumn{1}{|c}{\multirow{9}{*}{\rotatebox{90}{Weight Decay}}}
+        &\multicolumn{1}{c|}{\multirow{2}{*}{$0$}}&
+        \threemetrics{0.1198}{2.7436}{57.57\%}&\threemetrics{0.5312}{1.3350}{60.60\%}&\threemetrics{0.7723}{1.1128}{63.38\%}&\threemetrics{0.8797}{1.1291}{61.61\%}&\multicolumn{1}{c|}{\threemetrics{0.8810}{1.3040}{55.70\%}}\\
+        \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
+        \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
+        \multicolumn{1}{|c}{}
+        &\multicolumn{1}{c|}{\multirow{3}{*}{$1e-3$}}&
+        \threemetrics{0.0263}{1.7856}{62.68\%}&\threemetrics{0.1329}{1.3967}{66.66\%}&\threemetrics{0.3496}{1.0275}{69.99\%}&\threemetrics{0.6150}{0.9844}{66.67\%}&\multicolumn{1}{c|}{\threemetrics{0.4338}{1.1705}{64.12\%}}\\
+        \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
+        \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
+        \multicolumn{1}{|c}{}
+        &\multicolumn{1}{c|}{\multirow{3}{*}{$1e-2$}}&
+        \threemetrics{0.8659}{1.1954}{64.73\%}&\threemetrics{0.4323}{0.9248}{69.04\%}&\threemetrics{0.6833}{\mathbf{0.8616}}{\mathbf{70.40\%}}&\threemetrics{0.8101}{0.9221}{67.84\%}&\multicolumn{1}{c|}{\threemetrics{0.8659}{1.1295}{59.05\%}}
+        \\
+        \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
+        \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
+        \cline{3-7}
+    \end{tabular}
+    \caption{Result of anti-overfitting methods with Simple Classifier on CIFAR-10 REBA. F.X stands for random flip (vertical and horizontal) with total probability of $0.X$. C stands for random crop.}
+    \label{tab:3}
+\end{table}
+
+\section{附录}
+\subsection{训练细节}
+默认情况下：学习率 $1e-2$，batch size $1024$，共训练 $5,000,000$ 迭代，从第 $50,000$ 次迭代起，每 $200,000$ 迭代降低学习率为 $0.5$ 倍。weight decay $1e-3$。数据增强不启用；若启用，方式为随机翻转和随机裁剪。
+
+\subsection{数据增强的使用场景}
+数据增强能增加样本多样性从而提高表现，但它是基于数据的，因此受到数据集本身影响。在 IMBA 数据集上，类别不均导致增强的表现集中体现在优势类，损失下降的同时准确性也下降了。
+
+数据增强对模型的表达能力有要求。在 CIFAR-10 数据集上，数据增强使 Simple Extractor 的性能不升反减，却能使 ResNet50 的性能提升（Loss: $0.3838$, Acc.: $87.35\%$）。
+
+\subsection{IMBA 数据集的实现}
+直接使用 mask 会导致 batch size，引发训练不稳定，同时也不能保证均匀、准确地删去九成劣势数据。同时为了便于实现 REBA 数据集，我采用先删减后读入的方式实现 IMBA 数据集。
+
+\end{document}

@@ -1,0 +1,19 @@
+------------ self.options -------------
+batch_size: 128
+checkpoint: ./checkpoint
+data_root: ./cifar_data
+lr: 0.001
+lr_decay: 0.5
+lr_decay_freq: 200000
+lr_decay_iter: 50000
+max_epoch: 100
+max_iter: 5000000
+model: resnet50
+name: ResNet50
+num_classes: 10
+resume: False
+save_freq: 1
+train: True
+unbalanced_data: False
+weight_decay: 0.001
+-------------- End ----------------

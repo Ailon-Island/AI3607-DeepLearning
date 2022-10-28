@@ -1,0 +1,24 @@
+------------ self.options -------------
+batch_size: 1024
+checkpoint: ./checkpoint
+data_augment: True
+data_root: ./cifar_data
+gradient_clip: 0.1
+inferior_weight: 1.0
+lr: 0.01
+lr_decay: 0.5
+lr_decay_freq: 192500
+lr_decay_iter: 55000
+max_epoch: 200
+max_iter: 5000000
+model: simple_classifier
+name: SimpleUnbalancedAug
+num_classes: 10
+rebalanced_data: False
+resume: False
+save_freq: 1
+train: True
+unbalanced_data: True
+use_gradient_clip: False
+weight_decay: 0.001
+-------------- End ----------------

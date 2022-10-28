@@ -1,0 +1,725 @@
+Train Epoch: 1 [10240/50000 (20%)]	Loss: 2.330807	Accuracy: 0.110352
+Train Epoch: 1 [20480/50000 (41%)]	Loss: 2.107809	Accuracy: 0.193359
+Train Epoch: 1 [30720/50000 (61%)]	Loss: 2.022435	Accuracy: 0.229492
+Train Epoch: 1 [40960/50000 (82%)]	Loss: 1.995928	Accuracy: 0.263672
+Learning rate updates to 0.005
+Testing Epoch: 1 [10000/10000 (100%)]	Loss: 1.927719	Accuracy: 0.233418
+Test Epoch: 1, Average loss: 1.946156, Accuracy: 0.227800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_50000.pth
+Train Epoch: 2 [10240/50000 (20%)]	Loss: 1.728229	Accuracy: 0.367188
+Train Epoch: 2 [20480/50000 (41%)]	Loss: 1.677359	Accuracy: 0.364258
+Train Epoch: 2 [30720/50000 (61%)]	Loss: 1.685334	Accuracy: 0.380859
+Train Epoch: 2 [40960/50000 (82%)]	Loss: 1.587388	Accuracy: 0.404297
+Testing Epoch: 2 [10000/10000 (100%)]	Loss: 1.752682	Accuracy: 0.335459
+Test Epoch: 2, Average loss: 1.708807, Accuracy: 0.363300
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_100000.pth
+Train Epoch: 3 [10240/50000 (20%)]	Loss: 1.556960	Accuracy: 0.444336
+Train Epoch: 3 [20480/50000 (41%)]	Loss: 1.634232	Accuracy: 0.383789
+Train Epoch: 3 [30720/50000 (61%)]	Loss: 1.523282	Accuracy: 0.460938
+Train Epoch: 3 [40960/50000 (82%)]	Loss: 1.555675	Accuracy: 0.418945
+Testing Epoch: 3 [10000/10000 (100%)]	Loss: 1.491280	Accuracy: 0.446428
+Test Epoch: 3, Average loss: 1.489329, Accuracy: 0.443200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_150000.pth
+Train Epoch: 4 [10240/50000 (20%)]	Loss: 1.523705	Accuracy: 0.417969
+Train Epoch: 4 [20480/50000 (41%)]	Loss: 1.505786	Accuracy: 0.411133
+Train Epoch: 4 [30720/50000 (61%)]	Loss: 1.510155	Accuracy: 0.452148
+Train Epoch: 4 [40960/50000 (82%)]	Loss: 1.495882	Accuracy: 0.458984
+Testing Epoch: 4 [10000/10000 (100%)]	Loss: 1.556493	Accuracy: 0.446428
+Test Epoch: 4, Average loss: 1.513492, Accuracy: 0.454700
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_200000.pth
+Train Epoch: 5 [10240/50000 (20%)]	Loss: 1.495713	Accuracy: 0.466797
+Train Epoch: 5 [20480/50000 (41%)]	Loss: 1.439538	Accuracy: 0.481445
+Train Epoch: 5 [30720/50000 (61%)]	Loss: 1.421442	Accuracy: 0.490234
+Train Epoch: 5 [40960/50000 (82%)]	Loss: 1.388232	Accuracy: 0.486328
+Learning rate updates to 0.0025
+Testing Epoch: 5 [10000/10000 (100%)]	Loss: 1.441000	Accuracy: 0.457908
+Test Epoch: 5, Average loss: 1.417481, Accuracy: 0.480500
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_250000.pth
+Train Epoch: 6 [10240/50000 (20%)]	Loss: 1.285384	Accuracy: 0.558594
+Train Epoch: 6 [20480/50000 (41%)]	Loss: 1.327902	Accuracy: 0.541992
+Train Epoch: 6 [30720/50000 (61%)]	Loss: 1.313585	Accuracy: 0.516602
+Train Epoch: 6 [40960/50000 (82%)]	Loss: 1.257945	Accuracy: 0.546875
+Testing Epoch: 6 [10000/10000 (100%)]	Loss: 1.377226	Accuracy: 0.488520
+Test Epoch: 6, Average loss: 1.366936, Accuracy: 0.497000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_300000.pth
+Train Epoch: 7 [10240/50000 (20%)]	Loss: 1.305526	Accuracy: 0.524414
+Train Epoch: 7 [20480/50000 (41%)]	Loss: 1.274038	Accuracy: 0.550781
+Train Epoch: 7 [30720/50000 (61%)]	Loss: 1.328572	Accuracy: 0.518555
+Train Epoch: 7 [40960/50000 (82%)]	Loss: 1.293000	Accuracy: 0.529297
+Testing Epoch: 7 [10000/10000 (100%)]	Loss: 1.348967	Accuracy: 0.514031
+Test Epoch: 7, Average loss: 1.309623, Accuracy: 0.532800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_350000.pth
+Train Epoch: 8 [10240/50000 (20%)]	Loss: 1.234160	Accuracy: 0.553711
+Train Epoch: 8 [20480/50000 (41%)]	Loss: 1.230821	Accuracy: 0.556641
+Train Epoch: 8 [30720/50000 (61%)]	Loss: 1.219923	Accuracy: 0.562500
+Train Epoch: 8 [40960/50000 (82%)]	Loss: 1.273783	Accuracy: 0.523438
+Testing Epoch: 8 [10000/10000 (100%)]	Loss: 1.277633	Accuracy: 0.545919
+Test Epoch: 8, Average loss: 1.257563, Accuracy: 0.544500
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_400000.pth
+Train Epoch: 9 [10240/50000 (20%)]	Loss: 1.241966	Accuracy: 0.548828
+Train Epoch: 9 [20480/50000 (41%)]	Loss: 1.217861	Accuracy: 0.565430
+Train Epoch: 9 [30720/50000 (61%)]	Loss: 1.159117	Accuracy: 0.589844
+Train Epoch: 9 [40960/50000 (82%)]	Loss: 1.133387	Accuracy: 0.582031
+Learning rate updates to 0.00125
+Testing Epoch: 9 [10000/10000 (100%)]	Loss: 1.310992	Accuracy: 0.536990
+Test Epoch: 9, Average loss: 1.305520, Accuracy: 0.545900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_450000.pth
+Train Epoch: 10 [10240/50000 (20%)]	Loss: 1.110911	Accuracy: 0.607422
+Train Epoch: 10 [20480/50000 (41%)]	Loss: 1.139253	Accuracy: 0.588867
+Train Epoch: 10 [30720/50000 (61%)]	Loss: 1.155903	Accuracy: 0.601562
+Train Epoch: 10 [40960/50000 (82%)]	Loss: 1.115590	Accuracy: 0.607422
+Testing Epoch: 10 [10000/10000 (100%)]	Loss: 1.149698	Accuracy: 0.572705
+Test Epoch: 10, Average loss: 1.114936, Accuracy: 0.596800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_500000.pth
+Train Epoch: 11 [10240/50000 (20%)]	Loss: 1.078046	Accuracy: 0.600586
+Train Epoch: 11 [20480/50000 (41%)]	Loss: 1.048488	Accuracy: 0.636719
+Train Epoch: 11 [30720/50000 (61%)]	Loss: 1.114442	Accuracy: 0.598633
+Train Epoch: 11 [40960/50000 (82%)]	Loss: 1.084179	Accuracy: 0.625000
+Testing Epoch: 11 [10000/10000 (100%)]	Loss: 1.137039	Accuracy: 0.588011
+Test Epoch: 11, Average loss: 1.115458, Accuracy: 0.598400
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_550000.pth
+Train Epoch: 12 [10240/50000 (20%)]	Loss: 1.090454	Accuracy: 0.627930
+Train Epoch: 12 [20480/50000 (41%)]	Loss: 1.054768	Accuracy: 0.613281
+Train Epoch: 12 [30720/50000 (61%)]	Loss: 1.128476	Accuracy: 0.583984
+Train Epoch: 12 [40960/50000 (82%)]	Loss: 1.071613	Accuracy: 0.617188
+Testing Epoch: 12 [10000/10000 (100%)]	Loss: 1.132585	Accuracy: 0.586735
+Test Epoch: 12, Average loss: 1.111309, Accuracy: 0.608100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_600000.pth
+Train Epoch: 13 [10240/50000 (20%)]	Loss: 1.071093	Accuracy: 0.632812
+Train Epoch: 13 [20480/50000 (41%)]	Loss: 1.047709	Accuracy: 0.637695
+Train Epoch: 13 [30720/50000 (61%)]	Loss: 1.049358	Accuracy: 0.622070
+Train Epoch: 13 [40960/50000 (82%)]	Loss: 1.059876	Accuracy: 0.647461
+Learning rate updates to 0.000625
+Testing Epoch: 13 [10000/10000 (100%)]	Loss: 1.102600	Accuracy: 0.608419
+Test Epoch: 13, Average loss: 1.083323, Accuracy: 0.617200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_650000.pth
+Train Epoch: 14 [10240/50000 (20%)]	Loss: 1.038499	Accuracy: 0.633789
+Train Epoch: 14 [20480/50000 (41%)]	Loss: 0.990686	Accuracy: 0.659180
+Train Epoch: 14 [30720/50000 (61%)]	Loss: 0.952587	Accuracy: 0.666016
+Train Epoch: 14 [40960/50000 (82%)]	Loss: 0.942656	Accuracy: 0.693359
+Testing Epoch: 14 [10000/10000 (100%)]	Loss: 1.069241	Accuracy: 0.607144
+Test Epoch: 14, Average loss: 1.066030, Accuracy: 0.619400
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_700000.pth
+Train Epoch: 15 [10240/50000 (20%)]	Loss: 0.966929	Accuracy: 0.655273
+Train Epoch: 15 [20480/50000 (41%)]	Loss: 0.962598	Accuracy: 0.664062
+Train Epoch: 15 [30720/50000 (61%)]	Loss: 0.948839	Accuracy: 0.659180
+Train Epoch: 15 [40960/50000 (82%)]	Loss: 1.025415	Accuracy: 0.620117
+Testing Epoch: 15 [10000/10000 (100%)]	Loss: 1.214971	Accuracy: 0.567603
+Test Epoch: 15, Average loss: 1.179660, Accuracy: 0.587900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_750000.pth
+Train Epoch: 16 [10240/50000 (20%)]	Loss: 1.015828	Accuracy: 0.648438
+Train Epoch: 16 [20480/50000 (41%)]	Loss: 0.922871	Accuracy: 0.677734
+Train Epoch: 16 [30720/50000 (61%)]	Loss: 0.954623	Accuracy: 0.669922
+Train Epoch: 16 [40960/50000 (82%)]	Loss: 1.038104	Accuracy: 0.633789
+Testing Epoch: 16 [10000/10000 (100%)]	Loss: 1.060702	Accuracy: 0.626277
+Test Epoch: 16, Average loss: 1.035738, Accuracy: 0.640900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_800000.pth
+Train Epoch: 17 [10240/50000 (20%)]	Loss: 0.970934	Accuracy: 0.658203
+Train Epoch: 17 [20480/50000 (41%)]	Loss: 0.989501	Accuracy: 0.654297
+Train Epoch: 17 [30720/50000 (61%)]	Loss: 0.960016	Accuracy: 0.659180
+Train Epoch: 17 [40960/50000 (82%)]	Loss: 0.991532	Accuracy: 0.658203
+Learning rate updates to 0.0003125
+Testing Epoch: 17 [10000/10000 (100%)]	Loss: 1.047325	Accuracy: 0.625001
+Test Epoch: 17, Average loss: 1.037805, Accuracy: 0.637700
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_850000.pth
+Train Epoch: 18 [10240/50000 (20%)]	Loss: 0.848044	Accuracy: 0.708984
+Train Epoch: 18 [20480/50000 (41%)]	Loss: 0.903023	Accuracy: 0.685547
+Train Epoch: 18 [30720/50000 (61%)]	Loss: 0.947851	Accuracy: 0.675781
+Train Epoch: 18 [40960/50000 (82%)]	Loss: 0.869677	Accuracy: 0.697266
+Testing Epoch: 18 [10000/10000 (100%)]	Loss: 0.949245	Accuracy: 0.670920
+Test Epoch: 18, Average loss: 0.929023, Accuracy: 0.676600
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_900000.pth
+Train Epoch: 19 [10240/50000 (20%)]	Loss: 0.904513	Accuracy: 0.694336
+Train Epoch: 19 [20480/50000 (41%)]	Loss: 0.851253	Accuracy: 0.711914
+Train Epoch: 19 [30720/50000 (61%)]	Loss: 0.834952	Accuracy: 0.708984
+Train Epoch: 19 [40960/50000 (82%)]	Loss: 0.927631	Accuracy: 0.683594
+Testing Epoch: 19 [10000/10000 (100%)]	Loss: 1.015993	Accuracy: 0.640307
+Test Epoch: 19, Average loss: 0.989352, Accuracy: 0.653200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_950000.pth
+Train Epoch: 20 [10240/50000 (20%)]	Loss: 0.847166	Accuracy: 0.709961
+Train Epoch: 20 [20480/50000 (41%)]	Loss: 0.892817	Accuracy: 0.699219
+Train Epoch: 20 [30720/50000 (61%)]	Loss: 0.919647	Accuracy: 0.680664
+Train Epoch: 20 [40960/50000 (82%)]	Loss: 0.822908	Accuracy: 0.724609
+Testing Epoch: 20 [10000/10000 (100%)]	Loss: 1.097562	Accuracy: 0.599491
+Test Epoch: 20, Average loss: 1.068453, Accuracy: 0.619900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1000000.pth
+Train Epoch: 21 [10240/50000 (20%)]	Loss: 0.877570	Accuracy: 0.692383
+Train Epoch: 21 [20480/50000 (41%)]	Loss: 0.852477	Accuracy: 0.710938
+Train Epoch: 21 [30720/50000 (61%)]	Loss: 0.857017	Accuracy: 0.712891
+Train Epoch: 21 [40960/50000 (82%)]	Loss: 0.902918	Accuracy: 0.689453
+Learning rate updates to 0.00015625
+Testing Epoch: 21 [10000/10000 (100%)]	Loss: 0.986432	Accuracy: 0.645409
+Test Epoch: 21, Average loss: 0.965390, Accuracy: 0.661800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1050000.pth
+Train Epoch: 22 [10240/50000 (20%)]	Loss: 0.887572	Accuracy: 0.683594
+Train Epoch: 22 [20480/50000 (41%)]	Loss: 0.833684	Accuracy: 0.702148
+Train Epoch: 22 [30720/50000 (61%)]	Loss: 0.867250	Accuracy: 0.695312
+Train Epoch: 22 [40960/50000 (82%)]	Loss: 0.835298	Accuracy: 0.713867
+Testing Epoch: 22 [10000/10000 (100%)]	Loss: 0.935533	Accuracy: 0.667093
+Test Epoch: 22, Average loss: 0.913729, Accuracy: 0.682900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1100000.pth
+Train Epoch: 23 [10240/50000 (20%)]	Loss: 0.792400	Accuracy: 0.725586
+Train Epoch: 23 [20480/50000 (41%)]	Loss: 0.827787	Accuracy: 0.733398
+Train Epoch: 23 [30720/50000 (61%)]	Loss: 0.833546	Accuracy: 0.718750
+Train Epoch: 23 [40960/50000 (82%)]	Loss: 0.826114	Accuracy: 0.726562
+Testing Epoch: 23 [10000/10000 (100%)]	Loss: 0.985093	Accuracy: 0.645409
+Test Epoch: 23, Average loss: 0.969566, Accuracy: 0.668300
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1150000.pth
+Train Epoch: 24 [10240/50000 (20%)]	Loss: 0.836028	Accuracy: 0.716797
+Train Epoch: 24 [20480/50000 (41%)]	Loss: 0.858120	Accuracy: 0.704102
+Train Epoch: 24 [30720/50000 (61%)]	Loss: 0.835511	Accuracy: 0.731445
+Train Epoch: 24 [40960/50000 (82%)]	Loss: 0.841200	Accuracy: 0.720703
+Testing Epoch: 24 [10000/10000 (100%)]	Loss: 0.981957	Accuracy: 0.647960
+Test Epoch: 24, Average loss: 0.955622, Accuracy: 0.668900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1200000.pth
+Train Epoch: 25 [10240/50000 (20%)]	Loss: 0.741741	Accuracy: 0.754883
+Train Epoch: 25 [20480/50000 (41%)]	Loss: 0.821979	Accuracy: 0.725586
+Train Epoch: 25 [30720/50000 (61%)]	Loss: 0.821420	Accuracy: 0.716797
+Train Epoch: 25 [40960/50000 (82%)]	Loss: 0.838124	Accuracy: 0.705078
+Learning rate updates to 7.8125e-05
+Testing Epoch: 25 [10000/10000 (100%)]	Loss: 0.968227	Accuracy: 0.654338
+Test Epoch: 25, Average loss: 0.968918, Accuracy: 0.666600
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1250000.pth
+Train Epoch: 26 [10240/50000 (20%)]	Loss: 0.783192	Accuracy: 0.734375
+Train Epoch: 26 [20480/50000 (41%)]	Loss: 0.815148	Accuracy: 0.729492
+Train Epoch: 26 [30720/50000 (61%)]	Loss: 0.761390	Accuracy: 0.741211
+Train Epoch: 26 [40960/50000 (82%)]	Loss: 0.805772	Accuracy: 0.734375
+Testing Epoch: 26 [10000/10000 (100%)]	Loss: 0.911719	Accuracy: 0.676022
+Test Epoch: 26, Average loss: 0.897156, Accuracy: 0.693100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1300000.pth
+Train Epoch: 27 [10240/50000 (20%)]	Loss: 0.818622	Accuracy: 0.734375
+Train Epoch: 27 [20480/50000 (41%)]	Loss: 0.777061	Accuracy: 0.750000
+Train Epoch: 27 [30720/50000 (61%)]	Loss: 0.803862	Accuracy: 0.710938
+Train Epoch: 27 [40960/50000 (82%)]	Loss: 0.805536	Accuracy: 0.724609
+Testing Epoch: 27 [10000/10000 (100%)]	Loss: 0.950468	Accuracy: 0.661991
+Test Epoch: 27, Average loss: 0.938291, Accuracy: 0.679600
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1350000.pth
+Train Epoch: 28 [10240/50000 (20%)]	Loss: 0.780617	Accuracy: 0.726562
+Train Epoch: 28 [20480/50000 (41%)]	Loss: 0.802603	Accuracy: 0.730469
+Train Epoch: 28 [30720/50000 (61%)]	Loss: 0.795175	Accuracy: 0.725586
+Train Epoch: 28 [40960/50000 (82%)]	Loss: 0.743784	Accuracy: 0.750977
+Testing Epoch: 28 [10000/10000 (100%)]	Loss: 0.948615	Accuracy: 0.665817
+Test Epoch: 28, Average loss: 0.924304, Accuracy: 0.682100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1400000.pth
+Train Epoch: 29 [10240/50000 (20%)]	Loss: 0.811811	Accuracy: 0.729492
+Train Epoch: 29 [20480/50000 (41%)]	Loss: 0.809480	Accuracy: 0.720703
+Train Epoch: 29 [30720/50000 (61%)]	Loss: 0.775641	Accuracy: 0.737305
+Train Epoch: 29 [40960/50000 (82%)]	Loss: 0.771838	Accuracy: 0.741211
+Learning rate updates to 3.90625e-05
+Testing Epoch: 29 [10000/10000 (100%)]	Loss: 0.915605	Accuracy: 0.678573
+Test Epoch: 29, Average loss: 0.895840, Accuracy: 0.694400
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1450000.pth
+Train Epoch: 30 [10240/50000 (20%)]	Loss: 0.747671	Accuracy: 0.753906
+Train Epoch: 30 [20480/50000 (41%)]	Loss: 0.731695	Accuracy: 0.775391
+Train Epoch: 30 [30720/50000 (61%)]	Loss: 0.785900	Accuracy: 0.745117
+Train Epoch: 30 [40960/50000 (82%)]	Loss: 0.727637	Accuracy: 0.767578
+Testing Epoch: 30 [10000/10000 (100%)]	Loss: 0.905936	Accuracy: 0.688777
+Test Epoch: 30, Average loss: 0.896715, Accuracy: 0.691400
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1500000.pth
+Train Epoch: 31 [10240/50000 (20%)]	Loss: 0.778499	Accuracy: 0.744141
+Train Epoch: 31 [20480/50000 (41%)]	Loss: 0.798731	Accuracy: 0.735352
+Train Epoch: 31 [30720/50000 (61%)]	Loss: 0.719542	Accuracy: 0.760742
+Train Epoch: 31 [40960/50000 (82%)]	Loss: 0.720027	Accuracy: 0.760742
+Testing Epoch: 31 [10000/10000 (100%)]	Loss: 0.904818	Accuracy: 0.676022
+Test Epoch: 31, Average loss: 0.893231, Accuracy: 0.692400
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1550000.pth
+Train Epoch: 32 [10240/50000 (20%)]	Loss: 0.777281	Accuracy: 0.730469
+Train Epoch: 32 [20480/50000 (41%)]	Loss: 0.816003	Accuracy: 0.732422
+Train Epoch: 32 [30720/50000 (61%)]	Loss: 0.749837	Accuracy: 0.763672
+Train Epoch: 32 [40960/50000 (82%)]	Loss: 0.782236	Accuracy: 0.744141
+Testing Epoch: 32 [10000/10000 (100%)]	Loss: 0.909869	Accuracy: 0.683675
+Test Epoch: 32, Average loss: 0.900495, Accuracy: 0.693200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1600000.pth
+Train Epoch: 33 [10240/50000 (20%)]	Loss: 0.779893	Accuracy: 0.738281
+Train Epoch: 33 [20480/50000 (41%)]	Loss: 0.752587	Accuracy: 0.760742
+Train Epoch: 33 [30720/50000 (61%)]	Loss: 0.757758	Accuracy: 0.759766
+Train Epoch: 33 [40960/50000 (82%)]	Loss: 0.705835	Accuracy: 0.765625
+Learning rate updates to 1.953125e-05
+Testing Epoch: 33 [10000/10000 (100%)]	Loss: 0.898030	Accuracy: 0.672195
+Test Epoch: 33, Average loss: 0.885974, Accuracy: 0.696100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1650000.pth
+Train Epoch: 34 [10240/50000 (20%)]	Loss: 0.772460	Accuracy: 0.752930
+Train Epoch: 34 [20480/50000 (41%)]	Loss: 0.717892	Accuracy: 0.784180
+Train Epoch: 34 [30720/50000 (61%)]	Loss: 0.772898	Accuracy: 0.737305
+Train Epoch: 34 [40960/50000 (82%)]	Loss: 0.742254	Accuracy: 0.756836
+Testing Epoch: 34 [10000/10000 (100%)]	Loss: 0.910461	Accuracy: 0.679848
+Test Epoch: 34, Average loss: 0.898545, Accuracy: 0.689100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1700000.pth
+Train Epoch: 35 [10240/50000 (20%)]	Loss: 0.755355	Accuracy: 0.735352
+Train Epoch: 35 [20480/50000 (41%)]	Loss: 0.746700	Accuracy: 0.767578
+Train Epoch: 35 [30720/50000 (61%)]	Loss: 0.752293	Accuracy: 0.750977
+Train Epoch: 35 [40960/50000 (82%)]	Loss: 0.764672	Accuracy: 0.744141
+Testing Epoch: 35 [10000/10000 (100%)]	Loss: 0.901674	Accuracy: 0.674746
+Test Epoch: 35, Average loss: 0.888025, Accuracy: 0.697100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1750000.pth
+Train Epoch: 36 [10240/50000 (20%)]	Loss: 0.707135	Accuracy: 0.763672
+Train Epoch: 36 [20480/50000 (41%)]	Loss: 0.769969	Accuracy: 0.744141
+Train Epoch: 36 [30720/50000 (61%)]	Loss: 0.737904	Accuracy: 0.755859
+Train Epoch: 36 [40960/50000 (82%)]	Loss: 0.734371	Accuracy: 0.743164
+Testing Epoch: 36 [10000/10000 (100%)]	Loss: 0.904240	Accuracy: 0.683675
+Test Epoch: 36, Average loss: 0.892763, Accuracy: 0.694100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1800000.pth
+Train Epoch: 37 [10240/50000 (20%)]	Loss: 0.736283	Accuracy: 0.761719
+Train Epoch: 37 [20480/50000 (41%)]	Loss: 0.750617	Accuracy: 0.745117
+Train Epoch: 37 [30720/50000 (61%)]	Loss: 0.712737	Accuracy: 0.767578
+Train Epoch: 37 [40960/50000 (82%)]	Loss: 0.766020	Accuracy: 0.736328
+Learning rate updates to 9.765625e-06
+Testing Epoch: 37 [10000/10000 (100%)]	Loss: 0.903540	Accuracy: 0.678573
+Test Epoch: 37, Average loss: 0.895889, Accuracy: 0.692800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1850000.pth
+Train Epoch: 38 [10240/50000 (20%)]	Loss: 0.772658	Accuracy: 0.744141
+Train Epoch: 38 [20480/50000 (41%)]	Loss: 0.739070	Accuracy: 0.752930
+Train Epoch: 38 [30720/50000 (61%)]	Loss: 0.767958	Accuracy: 0.741211
+Train Epoch: 38 [40960/50000 (82%)]	Loss: 0.739935	Accuracy: 0.763672
+Testing Epoch: 38 [10000/10000 (100%)]	Loss: 0.900852	Accuracy: 0.679848
+Test Epoch: 38, Average loss: 0.890922, Accuracy: 0.694000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1900000.pth
+Train Epoch: 39 [10240/50000 (20%)]	Loss: 0.769876	Accuracy: 0.738281
+Train Epoch: 39 [20480/50000 (41%)]	Loss: 0.748088	Accuracy: 0.762695
+Train Epoch: 39 [30720/50000 (61%)]	Loss: 0.751133	Accuracy: 0.746094
+Train Epoch: 39 [40960/50000 (82%)]	Loss: 0.754903	Accuracy: 0.747070
+Testing Epoch: 39 [10000/10000 (100%)]	Loss: 0.898773	Accuracy: 0.683675
+Test Epoch: 39, Average loss: 0.889704, Accuracy: 0.693900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_1950000.pth
+Train Epoch: 40 [10240/50000 (20%)]	Loss: 0.728391	Accuracy: 0.760742
+Train Epoch: 40 [20480/50000 (41%)]	Loss: 0.725612	Accuracy: 0.753906
+Train Epoch: 40 [30720/50000 (61%)]	Loss: 0.741974	Accuracy: 0.744141
+Train Epoch: 40 [40960/50000 (82%)]	Loss: 0.723064	Accuracy: 0.761719
+Testing Epoch: 40 [10000/10000 (100%)]	Loss: 0.900801	Accuracy: 0.684950
+Test Epoch: 40, Average loss: 0.895234, Accuracy: 0.693000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2000000.pth
+Train Epoch: 41 [10240/50000 (20%)]	Loss: 0.731786	Accuracy: 0.762695
+Train Epoch: 41 [20480/50000 (41%)]	Loss: 0.751589	Accuracy: 0.748047
+Train Epoch: 41 [30720/50000 (61%)]	Loss: 0.777653	Accuracy: 0.736328
+Train Epoch: 41 [40960/50000 (82%)]	Loss: 0.714765	Accuracy: 0.767578
+Learning rate updates to 4.8828125e-06
+Testing Epoch: 41 [10000/10000 (100%)]	Loss: 0.895559	Accuracy: 0.679848
+Test Epoch: 41, Average loss: 0.889598, Accuracy: 0.694800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2050000.pth
+Train Epoch: 42 [10240/50000 (20%)]	Loss: 0.730487	Accuracy: 0.767578
+Train Epoch: 42 [20480/50000 (41%)]	Loss: 0.717499	Accuracy: 0.760742
+Train Epoch: 42 [30720/50000 (61%)]	Loss: 0.729878	Accuracy: 0.745117
+Train Epoch: 42 [40960/50000 (82%)]	Loss: 0.728073	Accuracy: 0.759766
+Testing Epoch: 42 [10000/10000 (100%)]	Loss: 0.904050	Accuracy: 0.676022
+Test Epoch: 42, Average loss: 0.895180, Accuracy: 0.694200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2100000.pth
+Train Epoch: 43 [10240/50000 (20%)]	Loss: 0.726822	Accuracy: 0.771484
+Train Epoch: 43 [20480/50000 (41%)]	Loss: 0.723248	Accuracy: 0.781250
+Train Epoch: 43 [30720/50000 (61%)]	Loss: 0.713712	Accuracy: 0.761719
+Train Epoch: 43 [40960/50000 (82%)]	Loss: 0.740086	Accuracy: 0.755859
+Testing Epoch: 43 [10000/10000 (100%)]	Loss: 0.891278	Accuracy: 0.683675
+Test Epoch: 43, Average loss: 0.879679, Accuracy: 0.697900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2150000.pth
+Train Epoch: 44 [10240/50000 (20%)]	Loss: 0.684774	Accuracy: 0.794922
+Train Epoch: 44 [20480/50000 (41%)]	Loss: 0.733777	Accuracy: 0.751953
+Train Epoch: 44 [30720/50000 (61%)]	Loss: 0.723791	Accuracy: 0.756836
+Train Epoch: 44 [40960/50000 (82%)]	Loss: 0.693059	Accuracy: 0.760742
+Testing Epoch: 44 [10000/10000 (100%)]	Loss: 0.895604	Accuracy: 0.686226
+Test Epoch: 44, Average loss: 0.887691, Accuracy: 0.695200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2200000.pth
+Train Epoch: 45 [10240/50000 (20%)]	Loss: 0.745032	Accuracy: 0.755859
+Train Epoch: 45 [20480/50000 (41%)]	Loss: 0.701127	Accuracy: 0.783203
+Train Epoch: 45 [30720/50000 (61%)]	Loss: 0.761434	Accuracy: 0.756836
+Train Epoch: 45 [40960/50000 (82%)]	Loss: 0.741790	Accuracy: 0.755859
+Learning rate updates to 2.44140625e-06
+Testing Epoch: 45 [10000/10000 (100%)]	Loss: 0.894511	Accuracy: 0.681124
+Test Epoch: 45, Average loss: 0.884174, Accuracy: 0.696900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2250000.pth
+Train Epoch: 46 [10240/50000 (20%)]	Loss: 0.738424	Accuracy: 0.765625
+Train Epoch: 46 [20480/50000 (41%)]	Loss: 0.715838	Accuracy: 0.770508
+Train Epoch: 46 [30720/50000 (61%)]	Loss: 0.702933	Accuracy: 0.773438
+Train Epoch: 46 [40960/50000 (82%)]	Loss: 0.751453	Accuracy: 0.749023
+Testing Epoch: 46 [10000/10000 (100%)]	Loss: 0.897301	Accuracy: 0.678573
+Test Epoch: 46, Average loss: 0.887665, Accuracy: 0.696200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2300000.pth
+Train Epoch: 47 [10240/50000 (20%)]	Loss: 0.722628	Accuracy: 0.762695
+Train Epoch: 47 [20480/50000 (41%)]	Loss: 0.730922	Accuracy: 0.757812
+Train Epoch: 47 [30720/50000 (61%)]	Loss: 0.731806	Accuracy: 0.752930
+Train Epoch: 47 [40960/50000 (82%)]	Loss: 0.745193	Accuracy: 0.758789
+Testing Epoch: 47 [10000/10000 (100%)]	Loss: 0.895511	Accuracy: 0.679848
+Test Epoch: 47, Average loss: 0.885838, Accuracy: 0.697000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2350000.pth
+Train Epoch: 48 [10240/50000 (20%)]	Loss: 0.724749	Accuracy: 0.753906
+Train Epoch: 48 [20480/50000 (41%)]	Loss: 0.743215	Accuracy: 0.765625
+Train Epoch: 48 [30720/50000 (61%)]	Loss: 0.750405	Accuracy: 0.752930
+Train Epoch: 48 [40960/50000 (82%)]	Loss: 0.704025	Accuracy: 0.779297
+Testing Epoch: 48 [10000/10000 (100%)]	Loss: 0.893538	Accuracy: 0.683675
+Test Epoch: 48, Average loss: 0.883096, Accuracy: 0.698100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2400000.pth
+Train Epoch: 49 [10240/50000 (20%)]	Loss: 0.682858	Accuracy: 0.773438
+Train Epoch: 49 [20480/50000 (41%)]	Loss: 0.731864	Accuracy: 0.779297
+Train Epoch: 49 [30720/50000 (61%)]	Loss: 0.707251	Accuracy: 0.771484
+Train Epoch: 49 [40960/50000 (82%)]	Loss: 0.732999	Accuracy: 0.765625
+Learning rate updates to 1.220703125e-06
+Testing Epoch: 49 [10000/10000 (100%)]	Loss: 0.897181	Accuracy: 0.679848
+Test Epoch: 49, Average loss: 0.887159, Accuracy: 0.696100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2450000.pth
+Train Epoch: 50 [10240/50000 (20%)]	Loss: 0.732320	Accuracy: 0.764648
+Train Epoch: 50 [20480/50000 (41%)]	Loss: 0.686699	Accuracy: 0.784180
+Train Epoch: 50 [30720/50000 (61%)]	Loss: 0.709237	Accuracy: 0.773438
+Train Epoch: 50 [40960/50000 (82%)]	Loss: 0.714026	Accuracy: 0.767578
+Testing Epoch: 50 [10000/10000 (100%)]	Loss: 0.893809	Accuracy: 0.682400
+Test Epoch: 50, Average loss: 0.884148, Accuracy: 0.697200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2500000.pth
+Train Epoch: 51 [10240/50000 (20%)]	Loss: 0.715659	Accuracy: 0.773438
+Train Epoch: 51 [20480/50000 (41%)]	Loss: 0.749086	Accuracy: 0.746094
+Train Epoch: 51 [30720/50000 (61%)]	Loss: 0.738101	Accuracy: 0.741211
+Train Epoch: 51 [40960/50000 (82%)]	Loss: 0.749339	Accuracy: 0.763672
+Testing Epoch: 51 [10000/10000 (100%)]	Loss: 0.894797	Accuracy: 0.679848
+Test Epoch: 51, Average loss: 0.885530, Accuracy: 0.696800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2550000.pth
+Train Epoch: 52 [10240/50000 (20%)]	Loss: 0.747460	Accuracy: 0.758789
+Train Epoch: 52 [20480/50000 (41%)]	Loss: 0.744131	Accuracy: 0.763672
+Train Epoch: 52 [30720/50000 (61%)]	Loss: 0.698419	Accuracy: 0.788086
+Train Epoch: 52 [40960/50000 (82%)]	Loss: 0.758326	Accuracy: 0.762695
+Testing Epoch: 52 [10000/10000 (100%)]	Loss: 0.893921	Accuracy: 0.683675
+Test Epoch: 52, Average loss: 0.885026, Accuracy: 0.697200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2600000.pth
+Train Epoch: 53 [10240/50000 (20%)]	Loss: 0.724721	Accuracy: 0.750977
+Train Epoch: 53 [20480/50000 (41%)]	Loss: 0.729745	Accuracy: 0.777344
+Train Epoch: 53 [30720/50000 (61%)]	Loss: 0.739383	Accuracy: 0.776367
+Train Epoch: 53 [40960/50000 (82%)]	Loss: 0.770062	Accuracy: 0.757812
+Learning rate updates to 6.103515625e-07
+Testing Epoch: 53 [10000/10000 (100%)]	Loss: 0.895701	Accuracy: 0.679848
+Test Epoch: 53, Average loss: 0.886382, Accuracy: 0.696500
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2650000.pth
+Train Epoch: 54 [10240/50000 (20%)]	Loss: 0.698179	Accuracy: 0.762695
+Train Epoch: 54 [20480/50000 (41%)]	Loss: 0.739196	Accuracy: 0.766602
+Train Epoch: 54 [30720/50000 (61%)]	Loss: 0.722304	Accuracy: 0.770508
+Train Epoch: 54 [40960/50000 (82%)]	Loss: 0.753869	Accuracy: 0.753906
+Testing Epoch: 54 [10000/10000 (100%)]	Loss: 0.894827	Accuracy: 0.681124
+Test Epoch: 54, Average loss: 0.885258, Accuracy: 0.697000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2700000.pth
+Train Epoch: 55 [10240/50000 (20%)]	Loss: 0.756230	Accuracy: 0.746094
+Train Epoch: 55 [20480/50000 (41%)]	Loss: 0.739073	Accuracy: 0.757812
+Train Epoch: 55 [30720/50000 (61%)]	Loss: 0.742882	Accuracy: 0.777344
+Train Epoch: 55 [40960/50000 (82%)]	Loss: 0.707838	Accuracy: 0.786133
+Testing Epoch: 55 [10000/10000 (100%)]	Loss: 0.893782	Accuracy: 0.681124
+Test Epoch: 55, Average loss: 0.883843, Accuracy: 0.698100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2750000.pth
+Train Epoch: 56 [10240/50000 (20%)]	Loss: 0.682732	Accuracy: 0.789062
+Train Epoch: 56 [20480/50000 (41%)]	Loss: 0.702399	Accuracy: 0.775391
+Train Epoch: 56 [30720/50000 (61%)]	Loss: 0.742489	Accuracy: 0.773438
+Train Epoch: 56 [40960/50000 (82%)]	Loss: 0.758654	Accuracy: 0.753906
+Testing Epoch: 56 [10000/10000 (100%)]	Loss: 0.894408	Accuracy: 0.679848
+Test Epoch: 56, Average loss: 0.885178, Accuracy: 0.696500
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2800000.pth
+Train Epoch: 57 [10240/50000 (20%)]	Loss: 0.717574	Accuracy: 0.762695
+Train Epoch: 57 [20480/50000 (41%)]	Loss: 0.740033	Accuracy: 0.752930
+Train Epoch: 57 [30720/50000 (61%)]	Loss: 0.718989	Accuracy: 0.769531
+Train Epoch: 57 [40960/50000 (82%)]	Loss: 0.729779	Accuracy: 0.760742
+Learning rate updates to 3.0517578125e-07
+Testing Epoch: 57 [10000/10000 (100%)]	Loss: 0.895657	Accuracy: 0.678573
+Test Epoch: 57, Average loss: 0.886311, Accuracy: 0.696600
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2850000.pth
+Train Epoch: 58 [10240/50000 (20%)]	Loss: 0.718547	Accuracy: 0.764648
+Train Epoch: 58 [20480/50000 (41%)]	Loss: 0.725565	Accuracy: 0.779297
+Train Epoch: 58 [30720/50000 (61%)]	Loss: 0.757565	Accuracy: 0.748047
+Train Epoch: 58 [40960/50000 (82%)]	Loss: 0.701824	Accuracy: 0.774414
+Testing Epoch: 58 [10000/10000 (100%)]	Loss: 0.895155	Accuracy: 0.681124
+Test Epoch: 58, Average loss: 0.885612, Accuracy: 0.697000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2900000.pth
+Train Epoch: 59 [10240/50000 (20%)]	Loss: 0.754075	Accuracy: 0.760742
+Train Epoch: 59 [20480/50000 (41%)]	Loss: 0.718371	Accuracy: 0.752930
+Train Epoch: 59 [30720/50000 (61%)]	Loss: 0.714422	Accuracy: 0.765625
+Train Epoch: 59 [40960/50000 (82%)]	Loss: 0.691395	Accuracy: 0.764648
+Testing Epoch: 59 [10000/10000 (100%)]	Loss: 0.896602	Accuracy: 0.677297
+Test Epoch: 59, Average loss: 0.887102, Accuracy: 0.696200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_2950000.pth
+Train Epoch: 60 [10240/50000 (20%)]	Loss: 0.701644	Accuracy: 0.779297
+Train Epoch: 60 [20480/50000 (41%)]	Loss: 0.759361	Accuracy: 0.751953
+Train Epoch: 60 [30720/50000 (61%)]	Loss: 0.747497	Accuracy: 0.753906
+Train Epoch: 60 [40960/50000 (82%)]	Loss: 0.716488	Accuracy: 0.756836
+Testing Epoch: 60 [10000/10000 (100%)]	Loss: 0.897094	Accuracy: 0.677297
+Test Epoch: 60, Average loss: 0.887449, Accuracy: 0.696300
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3000000.pth
+Train Epoch: 61 [10240/50000 (20%)]	Loss: 0.716601	Accuracy: 0.778320
+Train Epoch: 61 [20480/50000 (41%)]	Loss: 0.706175	Accuracy: 0.780273
+Train Epoch: 61 [30720/50000 (61%)]	Loss: 0.715620	Accuracy: 0.738281
+Train Epoch: 61 [40960/50000 (82%)]	Loss: 0.756719	Accuracy: 0.738281
+Learning rate updates to 1.52587890625e-07
+Testing Epoch: 61 [10000/10000 (100%)]	Loss: 0.896665	Accuracy: 0.681124
+Test Epoch: 61, Average loss: 0.886896, Accuracy: 0.697100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3050000.pth
+Train Epoch: 62 [10240/50000 (20%)]	Loss: 0.761854	Accuracy: 0.750000
+Train Epoch: 62 [20480/50000 (41%)]	Loss: 0.710231	Accuracy: 0.769531
+Train Epoch: 62 [30720/50000 (61%)]	Loss: 0.708501	Accuracy: 0.774414
+Train Epoch: 62 [40960/50000 (82%)]	Loss: 0.724307	Accuracy: 0.757812
+Testing Epoch: 62 [10000/10000 (100%)]	Loss: 0.896371	Accuracy: 0.679848
+Test Epoch: 62, Average loss: 0.887043, Accuracy: 0.696800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3100000.pth
+Train Epoch: 63 [10240/50000 (20%)]	Loss: 0.747272	Accuracy: 0.755859
+Train Epoch: 63 [20480/50000 (41%)]	Loss: 0.748105	Accuracy: 0.761719
+Train Epoch: 63 [30720/50000 (61%)]	Loss: 0.714356	Accuracy: 0.778320
+Train Epoch: 63 [40960/50000 (82%)]	Loss: 0.753279	Accuracy: 0.738281
+Testing Epoch: 63 [10000/10000 (100%)]	Loss: 0.897027	Accuracy: 0.681124
+Test Epoch: 63, Average loss: 0.887500, Accuracy: 0.695800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3150000.pth
+Train Epoch: 64 [10240/50000 (20%)]	Loss: 0.767109	Accuracy: 0.751953
+Train Epoch: 64 [20480/50000 (41%)]	Loss: 0.758380	Accuracy: 0.740234
+Train Epoch: 64 [30720/50000 (61%)]	Loss: 0.719212	Accuracy: 0.770508
+Train Epoch: 64 [40960/50000 (82%)]	Loss: 0.725705	Accuracy: 0.755859
+Testing Epoch: 64 [10000/10000 (100%)]	Loss: 0.895554	Accuracy: 0.681124
+Test Epoch: 64, Average loss: 0.885856, Accuracy: 0.696500
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3200000.pth
+Train Epoch: 65 [10240/50000 (20%)]	Loss: 0.727604	Accuracy: 0.755859
+Train Epoch: 65 [20480/50000 (41%)]	Loss: 0.737525	Accuracy: 0.769531
+Train Epoch: 65 [30720/50000 (61%)]	Loss: 0.753158	Accuracy: 0.747070
+Train Epoch: 65 [40960/50000 (82%)]	Loss: 0.737255	Accuracy: 0.751953
+Learning rate updates to 7.62939453125e-08
+Testing Epoch: 65 [10000/10000 (100%)]	Loss: 0.896042	Accuracy: 0.681124
+Test Epoch: 65, Average loss: 0.886775, Accuracy: 0.696200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3250000.pth
+Train Epoch: 66 [10240/50000 (20%)]	Loss: 0.700006	Accuracy: 0.769531
+Train Epoch: 66 [20480/50000 (41%)]	Loss: 0.736252	Accuracy: 0.751953
+Train Epoch: 66 [30720/50000 (61%)]	Loss: 0.717105	Accuracy: 0.762695
+Train Epoch: 66 [40960/50000 (82%)]	Loss: 0.695974	Accuracy: 0.781250
+Testing Epoch: 66 [10000/10000 (100%)]	Loss: 0.895512	Accuracy: 0.681124
+Test Epoch: 66, Average loss: 0.886138, Accuracy: 0.697000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3300000.pth
+Train Epoch: 67 [10240/50000 (20%)]	Loss: 0.698091	Accuracy: 0.779297
+Train Epoch: 67 [20480/50000 (41%)]	Loss: 0.726165	Accuracy: 0.756836
+Train Epoch: 67 [30720/50000 (61%)]	Loss: 0.706322	Accuracy: 0.778320
+Train Epoch: 67 [40960/50000 (82%)]	Loss: 0.753630	Accuracy: 0.749023
+Testing Epoch: 67 [10000/10000 (100%)]	Loss: 0.896385	Accuracy: 0.679848
+Test Epoch: 67, Average loss: 0.886493, Accuracy: 0.697300
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3350000.pth
+Train Epoch: 68 [10240/50000 (20%)]	Loss: 0.701155	Accuracy: 0.759766
+Train Epoch: 68 [20480/50000 (41%)]	Loss: 0.729047	Accuracy: 0.758789
+Train Epoch: 68 [30720/50000 (61%)]	Loss: 0.743312	Accuracy: 0.765625
+Train Epoch: 68 [40960/50000 (82%)]	Loss: 0.769866	Accuracy: 0.751953
+Testing Epoch: 68 [10000/10000 (100%)]	Loss: 0.896088	Accuracy: 0.678573
+Test Epoch: 68, Average loss: 0.886768, Accuracy: 0.697100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3400000.pth
+Train Epoch: 69 [10240/50000 (20%)]	Loss: 0.739816	Accuracy: 0.778320
+Train Epoch: 69 [20480/50000 (41%)]	Loss: 0.688778	Accuracy: 0.771484
+Train Epoch: 69 [30720/50000 (61%)]	Loss: 0.717893	Accuracy: 0.756836
+Train Epoch: 69 [40960/50000 (82%)]	Loss: 0.707239	Accuracy: 0.771484
+Learning rate updates to 3.814697265625e-08
+Testing Epoch: 69 [10000/10000 (100%)]	Loss: 0.895582	Accuracy: 0.679848
+Test Epoch: 69, Average loss: 0.885843, Accuracy: 0.697100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3450000.pth
+Train Epoch: 70 [10240/50000 (20%)]	Loss: 0.773601	Accuracy: 0.748047
+Train Epoch: 70 [20480/50000 (41%)]	Loss: 0.745902	Accuracy: 0.757812
+Train Epoch: 70 [30720/50000 (61%)]	Loss: 0.741316	Accuracy: 0.750977
+Train Epoch: 70 [40960/50000 (82%)]	Loss: 0.741109	Accuracy: 0.761719
+Testing Epoch: 70 [10000/10000 (100%)]	Loss: 0.895281	Accuracy: 0.681124
+Test Epoch: 70, Average loss: 0.885730, Accuracy: 0.697300
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3500000.pth
+Train Epoch: 71 [10240/50000 (20%)]	Loss: 0.693460	Accuracy: 0.786133
+Train Epoch: 71 [20480/50000 (41%)]	Loss: 0.764222	Accuracy: 0.753906
+Train Epoch: 71 [30720/50000 (61%)]	Loss: 0.721420	Accuracy: 0.782227
+Train Epoch: 71 [40960/50000 (82%)]	Loss: 0.718509	Accuracy: 0.757812
+Testing Epoch: 71 [10000/10000 (100%)]	Loss: 0.894192	Accuracy: 0.679848
+Test Epoch: 71, Average loss: 0.884775, Accuracy: 0.697100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3550000.pth
+Train Epoch: 72 [10240/50000 (20%)]	Loss: 0.759326	Accuracy: 0.745117
+Train Epoch: 72 [20480/50000 (41%)]	Loss: 0.734618	Accuracy: 0.766602
+Train Epoch: 72 [30720/50000 (61%)]	Loss: 0.746606	Accuracy: 0.765625
+Train Epoch: 72 [40960/50000 (82%)]	Loss: 0.697818	Accuracy: 0.792969
+Testing Epoch: 72 [10000/10000 (100%)]	Loss: 0.895523	Accuracy: 0.679848
+Test Epoch: 72, Average loss: 0.886297, Accuracy: 0.696100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3600000.pth
+Train Epoch: 73 [10240/50000 (20%)]	Loss: 0.711192	Accuracy: 0.775391
+Train Epoch: 73 [20480/50000 (41%)]	Loss: 0.735463	Accuracy: 0.772461
+Train Epoch: 73 [30720/50000 (61%)]	Loss: 0.755149	Accuracy: 0.755859
+Train Epoch: 73 [40960/50000 (82%)]	Loss: 0.801866	Accuracy: 0.726562
+Learning rate updates to 1.9073486328125e-08
+Testing Epoch: 73 [10000/10000 (100%)]	Loss: 0.896054	Accuracy: 0.678572
+Test Epoch: 73, Average loss: 0.886546, Accuracy: 0.696000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3650000.pth
+Train Epoch: 74 [10240/50000 (20%)]	Loss: 0.735118	Accuracy: 0.768555
+Train Epoch: 74 [20480/50000 (41%)]	Loss: 0.700974	Accuracy: 0.786133
+Train Epoch: 74 [30720/50000 (61%)]	Loss: 0.729307	Accuracy: 0.757812
+Train Epoch: 74 [40960/50000 (82%)]	Loss: 0.708296	Accuracy: 0.775391
+Testing Epoch: 74 [10000/10000 (100%)]	Loss: 0.894377	Accuracy: 0.681124
+Test Epoch: 74, Average loss: 0.884731, Accuracy: 0.697400
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3700000.pth
+Train Epoch: 75 [10240/50000 (20%)]	Loss: 0.725753	Accuracy: 0.760742
+Train Epoch: 75 [20480/50000 (41%)]	Loss: 0.765723	Accuracy: 0.738281
+Train Epoch: 75 [30720/50000 (61%)]	Loss: 0.747320	Accuracy: 0.745117
+Train Epoch: 75 [40960/50000 (82%)]	Loss: 0.721653	Accuracy: 0.780273
+Testing Epoch: 75 [10000/10000 (100%)]	Loss: 0.896000	Accuracy: 0.679848
+Test Epoch: 75, Average loss: 0.886767, Accuracy: 0.696100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3750000.pth
+Train Epoch: 76 [10240/50000 (20%)]	Loss: 0.749045	Accuracy: 0.771484
+Train Epoch: 76 [20480/50000 (41%)]	Loss: 0.728823	Accuracy: 0.763672
+Train Epoch: 76 [30720/50000 (61%)]	Loss: 0.733596	Accuracy: 0.768555
+Train Epoch: 76 [40960/50000 (82%)]	Loss: 0.711383	Accuracy: 0.764648
+Testing Epoch: 76 [10000/10000 (100%)]	Loss: 0.895657	Accuracy: 0.683675
+Test Epoch: 76, Average loss: 0.885827, Accuracy: 0.696800
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3800000.pth
+Train Epoch: 77 [10240/50000 (20%)]	Loss: 0.720691	Accuracy: 0.767578
+Train Epoch: 77 [20480/50000 (41%)]	Loss: 0.772997	Accuracy: 0.746094
+Train Epoch: 77 [30720/50000 (61%)]	Loss: 0.706097	Accuracy: 0.775391
+Train Epoch: 77 [40960/50000 (82%)]	Loss: 0.753256	Accuracy: 0.760742
+Learning rate updates to 9.5367431640625e-09
+Testing Epoch: 77 [10000/10000 (100%)]	Loss: 0.895297	Accuracy: 0.679848
+Test Epoch: 77, Average loss: 0.885718, Accuracy: 0.697300
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3850000.pth
+Train Epoch: 78 [10240/50000 (20%)]	Loss: 0.740579	Accuracy: 0.753906
+Train Epoch: 78 [20480/50000 (41%)]	Loss: 0.733670	Accuracy: 0.768555
+Train Epoch: 78 [30720/50000 (61%)]	Loss: 0.736007	Accuracy: 0.754883
+Train Epoch: 78 [40960/50000 (82%)]	Loss: 0.698596	Accuracy: 0.780273
+Testing Epoch: 78 [10000/10000 (100%)]	Loss: 0.896397	Accuracy: 0.678572
+Test Epoch: 78, Average loss: 0.886712, Accuracy: 0.697100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3900000.pth
+Train Epoch: 79 [10240/50000 (20%)]	Loss: 0.736541	Accuracy: 0.747070
+Train Epoch: 79 [20480/50000 (41%)]	Loss: 0.725359	Accuracy: 0.765625
+Train Epoch: 79 [30720/50000 (61%)]	Loss: 0.730277	Accuracy: 0.770508
+Train Epoch: 79 [40960/50000 (82%)]	Loss: 0.728738	Accuracy: 0.761719
+Testing Epoch: 79 [10000/10000 (100%)]	Loss: 0.896502	Accuracy: 0.678573
+Test Epoch: 79, Average loss: 0.886881, Accuracy: 0.697100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_3950000.pth
+Train Epoch: 80 [10240/50000 (20%)]	Loss: 0.774126	Accuracy: 0.735352
+Train Epoch: 80 [20480/50000 (41%)]	Loss: 0.772322	Accuracy: 0.750000
+Train Epoch: 80 [30720/50000 (61%)]	Loss: 0.744386	Accuracy: 0.762695
+Train Epoch: 80 [40960/50000 (82%)]	Loss: 0.729652	Accuracy: 0.761719
+Testing Epoch: 80 [10000/10000 (100%)]	Loss: 0.894836	Accuracy: 0.681124
+Test Epoch: 80, Average loss: 0.885501, Accuracy: 0.696700
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4000000.pth
+Train Epoch: 81 [10240/50000 (20%)]	Loss: 0.707930	Accuracy: 0.760742
+Train Epoch: 81 [20480/50000 (41%)]	Loss: 0.695015	Accuracy: 0.767578
+Train Epoch: 81 [30720/50000 (61%)]	Loss: 0.742323	Accuracy: 0.769531
+Train Epoch: 81 [40960/50000 (82%)]	Loss: 0.721481	Accuracy: 0.762695
+Learning rate updates to 4.76837158203125e-09
+Testing Epoch: 81 [10000/10000 (100%)]	Loss: 0.897182	Accuracy: 0.679848
+Test Epoch: 81, Average loss: 0.888040, Accuracy: 0.695900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4050000.pth
+Train Epoch: 82 [10240/50000 (20%)]	Loss: 0.760492	Accuracy: 0.756836
+Train Epoch: 82 [20480/50000 (41%)]	Loss: 0.757957	Accuracy: 0.743164
+Train Epoch: 82 [30720/50000 (61%)]	Loss: 0.729611	Accuracy: 0.751953
+Train Epoch: 82 [40960/50000 (82%)]	Loss: 0.735417	Accuracy: 0.759766
+Testing Epoch: 82 [10000/10000 (100%)]	Loss: 0.895777	Accuracy: 0.679848
+Test Epoch: 82, Average loss: 0.886366, Accuracy: 0.697000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4100000.pth
+Train Epoch: 83 [10240/50000 (20%)]	Loss: 0.725601	Accuracy: 0.770508
+Train Epoch: 83 [20480/50000 (41%)]	Loss: 0.728933	Accuracy: 0.767578
+Train Epoch: 83 [30720/50000 (61%)]	Loss: 0.759308	Accuracy: 0.746094
+Train Epoch: 83 [40960/50000 (82%)]	Loss: 0.748241	Accuracy: 0.753906
+Testing Epoch: 83 [10000/10000 (100%)]	Loss: 0.895536	Accuracy: 0.681124
+Test Epoch: 83, Average loss: 0.886074, Accuracy: 0.696000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4150000.pth
+Train Epoch: 84 [10240/50000 (20%)]	Loss: 0.685698	Accuracy: 0.788086
+Train Epoch: 84 [20480/50000 (41%)]	Loss: 0.674785	Accuracy: 0.787109
+Train Epoch: 84 [30720/50000 (61%)]	Loss: 0.725499	Accuracy: 0.755859
+Train Epoch: 84 [40960/50000 (82%)]	Loss: 0.758225	Accuracy: 0.755859
+Testing Epoch: 84 [10000/10000 (100%)]	Loss: 0.895974	Accuracy: 0.678573
+Test Epoch: 84, Average loss: 0.885927, Accuracy: 0.697000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4200000.pth
+Train Epoch: 85 [10240/50000 (20%)]	Loss: 0.735641	Accuracy: 0.750977
+Train Epoch: 85 [20480/50000 (41%)]	Loss: 0.743847	Accuracy: 0.765625
+Train Epoch: 85 [30720/50000 (61%)]	Loss: 0.782698	Accuracy: 0.728516
+Train Epoch: 85 [40960/50000 (82%)]	Loss: 0.744220	Accuracy: 0.764648
+Learning rate updates to 2.384185791015625e-09
+Testing Epoch: 85 [10000/10000 (100%)]	Loss: 0.895294	Accuracy: 0.679848
+Test Epoch: 85, Average loss: 0.885798, Accuracy: 0.696900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4250000.pth
+Train Epoch: 86 [10240/50000 (20%)]	Loss: 0.718987	Accuracy: 0.769531
+Train Epoch: 86 [20480/50000 (41%)]	Loss: 0.719513	Accuracy: 0.784180
+Train Epoch: 86 [30720/50000 (61%)]	Loss: 0.722378	Accuracy: 0.775391
+Train Epoch: 86 [40960/50000 (82%)]	Loss: 0.734540	Accuracy: 0.761719
+Testing Epoch: 86 [10000/10000 (100%)]	Loss: 0.895715	Accuracy: 0.681124
+Test Epoch: 86, Average loss: 0.885879, Accuracy: 0.696700
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4300000.pth
+Train Epoch: 87 [10240/50000 (20%)]	Loss: 0.746784	Accuracy: 0.743164
+Train Epoch: 87 [20480/50000 (41%)]	Loss: 0.712742	Accuracy: 0.770508
+Train Epoch: 87 [30720/50000 (61%)]	Loss: 0.728849	Accuracy: 0.761719
+Train Epoch: 87 [40960/50000 (82%)]	Loss: 0.748367	Accuracy: 0.744141
+Testing Epoch: 87 [10000/10000 (100%)]	Loss: 0.897012	Accuracy: 0.678573
+Test Epoch: 87, Average loss: 0.887502, Accuracy: 0.696500
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4350000.pth
+Train Epoch: 88 [10240/50000 (20%)]	Loss: 0.749988	Accuracy: 0.761719
+Train Epoch: 88 [20480/50000 (41%)]	Loss: 0.735974	Accuracy: 0.766602
+Train Epoch: 88 [30720/50000 (61%)]	Loss: 0.770794	Accuracy: 0.752930
+Train Epoch: 88 [40960/50000 (82%)]	Loss: 0.690520	Accuracy: 0.780273
+Testing Epoch: 88 [10000/10000 (100%)]	Loss: 0.895367	Accuracy: 0.679848
+Test Epoch: 88, Average loss: 0.885662, Accuracy: 0.696600
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4400000.pth
+Train Epoch: 89 [10240/50000 (20%)]	Loss: 0.733202	Accuracy: 0.767578
+Train Epoch: 89 [20480/50000 (41%)]	Loss: 0.720111	Accuracy: 0.779297
+Train Epoch: 89 [30720/50000 (61%)]	Loss: 0.725430	Accuracy: 0.768555
+Train Epoch: 89 [40960/50000 (82%)]	Loss: 0.735750	Accuracy: 0.757812
+Learning rate updates to 1.1920928955078125e-09
+Testing Epoch: 89 [10000/10000 (100%)]	Loss: 0.894947	Accuracy: 0.682399
+Test Epoch: 89, Average loss: 0.885728, Accuracy: 0.696200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4450000.pth
+Train Epoch: 90 [10240/50000 (20%)]	Loss: 0.716106	Accuracy: 0.762695
+Train Epoch: 90 [20480/50000 (41%)]	Loss: 0.711432	Accuracy: 0.777344
+Train Epoch: 90 [30720/50000 (61%)]	Loss: 0.725657	Accuracy: 0.762695
+Train Epoch: 90 [40960/50000 (82%)]	Loss: 0.709649	Accuracy: 0.768555
+Testing Epoch: 90 [10000/10000 (100%)]	Loss: 0.895507	Accuracy: 0.683675
+Test Epoch: 90, Average loss: 0.885844, Accuracy: 0.697300
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4500000.pth
+Train Epoch: 91 [10240/50000 (20%)]	Loss: 0.751434	Accuracy: 0.746094
+Train Epoch: 91 [20480/50000 (41%)]	Loss: 0.710318	Accuracy: 0.793945
+Train Epoch: 91 [30720/50000 (61%)]	Loss: 0.727439	Accuracy: 0.761719
+Train Epoch: 91 [40960/50000 (82%)]	Loss: 0.747692	Accuracy: 0.762695
+Testing Epoch: 91 [10000/10000 (100%)]	Loss: 0.895360	Accuracy: 0.679848
+Test Epoch: 91, Average loss: 0.885867, Accuracy: 0.696100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4550000.pth
+Train Epoch: 92 [10240/50000 (20%)]	Loss: 0.736893	Accuracy: 0.754883
+Train Epoch: 92 [20480/50000 (41%)]	Loss: 0.734248	Accuracy: 0.746094
+Train Epoch: 92 [30720/50000 (61%)]	Loss: 0.752732	Accuracy: 0.748047
+Train Epoch: 92 [40960/50000 (82%)]	Loss: 0.758894	Accuracy: 0.764648
+Testing Epoch: 92 [10000/10000 (100%)]	Loss: 0.895262	Accuracy: 0.679848
+Test Epoch: 92, Average loss: 0.886051, Accuracy: 0.696900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4600000.pth
+Train Epoch: 93 [10240/50000 (20%)]	Loss: 0.717894	Accuracy: 0.773438
+Train Epoch: 93 [20480/50000 (41%)]	Loss: 0.729944	Accuracy: 0.763672
+Train Epoch: 93 [30720/50000 (61%)]	Loss: 0.684997	Accuracy: 0.778320
+Train Epoch: 93 [40960/50000 (82%)]	Loss: 0.731461	Accuracy: 0.767578
+Learning rate updates to 5.960464477539063e-10
+Testing Epoch: 93 [10000/10000 (100%)]	Loss: 0.895487	Accuracy: 0.682399
+Test Epoch: 93, Average loss: 0.885974, Accuracy: 0.697400
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4650000.pth
+Train Epoch: 94 [10240/50000 (20%)]	Loss: 0.738543	Accuracy: 0.753906
+Train Epoch: 94 [20480/50000 (41%)]	Loss: 0.745990	Accuracy: 0.750977
+Train Epoch: 94 [30720/50000 (61%)]	Loss: 0.750197	Accuracy: 0.759766
+Train Epoch: 94 [40960/50000 (82%)]	Loss: 0.730279	Accuracy: 0.764648
+Testing Epoch: 94 [10000/10000 (100%)]	Loss: 0.896855	Accuracy: 0.679848
+Test Epoch: 94, Average loss: 0.887490, Accuracy: 0.697100
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4700000.pth
+Train Epoch: 95 [10240/50000 (20%)]	Loss: 0.750211	Accuracy: 0.760742
+Train Epoch: 95 [20480/50000 (41%)]	Loss: 0.746933	Accuracy: 0.757812
+Train Epoch: 95 [30720/50000 (61%)]	Loss: 0.710397	Accuracy: 0.764648
+Train Epoch: 95 [40960/50000 (82%)]	Loss: 0.730198	Accuracy: 0.758789
+Testing Epoch: 95 [10000/10000 (100%)]	Loss: 0.895953	Accuracy: 0.678573
+Test Epoch: 95, Average loss: 0.886839, Accuracy: 0.696600
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4750000.pth
+Train Epoch: 96 [10240/50000 (20%)]	Loss: 0.740015	Accuracy: 0.755859
+Train Epoch: 96 [20480/50000 (41%)]	Loss: 0.739527	Accuracy: 0.763672
+Train Epoch: 96 [30720/50000 (61%)]	Loss: 0.689002	Accuracy: 0.786133
+Train Epoch: 96 [40960/50000 (82%)]	Loss: 0.726787	Accuracy: 0.759766
+Testing Epoch: 96 [10000/10000 (100%)]	Loss: 0.895376	Accuracy: 0.678573
+Test Epoch: 96, Average loss: 0.886211, Accuracy: 0.696400
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4800000.pth
+Train Epoch: 97 [10240/50000 (20%)]	Loss: 0.728679	Accuracy: 0.756836
+Train Epoch: 97 [20480/50000 (41%)]	Loss: 0.724987	Accuracy: 0.771484
+Train Epoch: 97 [30720/50000 (61%)]	Loss: 0.747597	Accuracy: 0.753906
+Train Epoch: 97 [40960/50000 (82%)]	Loss: 0.740731	Accuracy: 0.766602
+Learning rate updates to 2.9802322387695313e-10
+Testing Epoch: 97 [10000/10000 (100%)]	Loss: 0.894855	Accuracy: 0.678573
+Test Epoch: 97, Average loss: 0.885380, Accuracy: 0.697000
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4850000.pth
+Train Epoch: 98 [10240/50000 (20%)]	Loss: 0.691435	Accuracy: 0.772461
+Train Epoch: 98 [20480/50000 (41%)]	Loss: 0.752639	Accuracy: 0.751953
+Train Epoch: 98 [30720/50000 (61%)]	Loss: 0.659333	Accuracy: 0.783203
+Train Epoch: 98 [40960/50000 (82%)]	Loss: 0.725716	Accuracy: 0.742188
+Testing Epoch: 98 [10000/10000 (100%)]	Loss: 0.896020	Accuracy: 0.679848
+Test Epoch: 98, Average loss: 0.886690, Accuracy: 0.696900
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4900000.pth
+Train Epoch: 99 [10240/50000 (20%)]	Loss: 0.747034	Accuracy: 0.762695
+Train Epoch: 99 [20480/50000 (41%)]	Loss: 0.702317	Accuracy: 0.782227
+Train Epoch: 99 [30720/50000 (61%)]	Loss: 0.769296	Accuracy: 0.749023
+Train Epoch: 99 [40960/50000 (82%)]	Loss: 0.697775	Accuracy: 0.770508
+Testing Epoch: 99 [10000/10000 (100%)]	Loss: 0.895916	Accuracy: 0.679848
+Test Epoch: 99, Average loss: 0.886804, Accuracy: 0.696200
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_4950000.pth
+Train Epoch: 100 [10240/50000 (20%)]	Loss: 0.704987	Accuracy: 0.771484
+Train Epoch: 100 [20480/50000 (41%)]	Loss: 0.724025	Accuracy: 0.769531
+Train Epoch: 100 [30720/50000 (61%)]	Loss: 0.689256	Accuracy: 0.766602
+Train Epoch: 100 [40960/50000 (82%)]	Loss: 0.750647	Accuracy: 0.754883
+Testing Epoch: 100 [10000/10000 (100%)]	Loss: 0.895546	Accuracy: 0.679848
+Test Epoch: 100, Average loss: 0.886229, Accuracy: 0.696700
+Model saved to ./checkpoint/SimpleRebalancedAug_0.3WeightDecay_1.1e-2/models/iter_5000000.pth
