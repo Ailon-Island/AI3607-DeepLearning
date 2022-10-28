@@ -2,8 +2,16 @@
 *\.idea
 *\__pycache__
 
+*\cifar_data
 *\models
 
 *.bcf
 *.xml
 *.gz
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.blg
+*.bbl
+*.aux
