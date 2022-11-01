@@ -1,7 +1,10 @@
 from jittor import Module, nn
 
 
-class SimpleClassifier(Module):
+from .classifier import Classifier
+
+
+class SimpleClassifier(Classifier):
     def __init__(self, num_classes=10):
         super().__init__()
         self.conv1 = nn.Conv2d(3, 64, 5)
@@ -12,6 +15,7 @@ class SimpleClassifier(Module):
         self.linear1 = nn.Linear(256 * 5 * 5, 256)
         self.linear2 = nn.Linear(256, 96)
         self.linear3 = nn.Linear(96, num_classes)
+        self.components = {'network': self}
 
     def execute(self, x):
         x = self.pool(nn.relu(self.bn1(self.conv1(x))))

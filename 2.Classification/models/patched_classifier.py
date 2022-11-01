@@ -1,15 +1,20 @@
 import jittor as jt
-from jittor import nn, Module
+from jittor import nn
 
+from .classifier import Classifier
 from utils.simple_extractor.simple_extractor import SimpleExtractor
 
 
-class PatchedClassifier(Module):
+class PatchedClassifier(Classifier):
     def __init__(self, num_classes=10):
         super().__init__()
         self.extractor = SimpleExtractor(patched=True)
-        self.linear1 = nn.Linear(2048, 256)
-        self.linear2 = nn.Linear(256, num_classes)
+        self.linears = nn.Sequential(
+            nn.Linear(2048, 4096),
+            nn.ReLU(),
+            nn.Linear(4096, num_classes),
+        )
+        self.components = {'extractor': self.extractor, 'linears': self.linears}
 
     def execute(self, x):
         bs = x.shape[0]
@@ -18,6 +23,5 @@ class PatchedClassifier(Module):
         x = jt.stack([x[:, :, :H_2, :W_2], x[:, :, :H_2, W_2:], x[:, :, H_2:, :W_2], x[:, :, H_2:, W_2:]], dim=1)
         x = self.extractor(x.view(-1, *x.shape[-3:]))
         x = x.view(bs, -1)
-        x = nn.relu(self.linear1(x))
-        pred = self.linear2(x)
+        pred = self.linears(x)
         return pred

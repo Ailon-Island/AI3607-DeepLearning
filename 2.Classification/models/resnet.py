@@ -1,5 +1,7 @@
 from jittor import nn, Module
 
+from .classifier import Classifier
+
 
 class ResBlock(Module):
     expansion = 4
@@ -33,7 +35,7 @@ class ResBlock(Module):
         return out
 
 
-class ResNet(Module):
+class ResNet(Classifier):
     def __init__(self, block, num_blocks, num_classes=10):
         super(ResNet, self).__init__()
         self.in_planes = 64
@@ -46,6 +48,7 @@ class ResNet(Module):
         self.layer3 = self._make_layer(block, 256, num_blocks[2], stride=2)
         self.layer4 = self._make_layer(block, 512, num_blocks[3], stride=2)
         self.linear = nn.Linear(512 * block.expansion, num_classes)
+        self.components = {'network': self}
 
     def _make_layer(self, block, planes, num_blocks, stride):
         strides = [stride] + [1] * (num_blocks - 1)

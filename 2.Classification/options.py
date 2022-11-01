@@ -88,12 +88,6 @@ class Options():
             help='path to pretrained model'
         )
         self.parser.add_argument(
-            '--freeze_iters',
-            type=int,
-            default=0,
-            help='number of iterations to freeze the feature extractor'
-        )
-        self.parser.add_argument(
             '--resume',
             action='store_true',
             help='resume from checkpoint'
@@ -120,14 +114,14 @@ class Options():
         self.parser.add_argument(
             '--lr',
             type=float,
-            default=8e-4,
+            default=1e-2,
             help='learning rate'
         )
         self.parser.add_argument(
-            '--lr_finetune',
+            '--lr_extractor',
             type=float,
-            default=0.,
-            help='finetuning learning rate'
+            default=3e-4,
+            help='learning rate for extractor'
         )
         self.parser.add_argument(
             '--lr_decay_iter',

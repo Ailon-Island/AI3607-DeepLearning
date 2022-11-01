@@ -111,7 +111,7 @@ class Options():
         self.parser.add_argument(
             '--lr_decay',
             type=float,
-            default=0.5,
+            default=0.8,
             help='learning rate decay ratio'
         )
         self.parser.add_argument(

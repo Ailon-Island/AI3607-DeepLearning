@@ -4,7 +4,7 @@ from jittor import Module, nn
 from .resnet import ResNet50
 from .simple_classifier import SimpleClassifier
 from .patched_classifier import PatchedClassifier
-from .two_staged_classifier import TwoStagedClassifier
+from .two_stage_classifier import TwoStageClassifier
 
 
 class Net(Module):
@@ -18,9 +18,9 @@ class Net(Module):
             Model = SimpleClassifier
         elif opt.model == 'patched_classifier':
             Model = PatchedClassifier
-            pretrained = opt.pretrained
-        elif opt.model == 'two_staged_classifier':
-            Model = TwoStagedClassifier
+            pretrained = opt.pretrainedj
+        elif opt.model == 'two_stage_classifier':
+            Model = TwoStageClassifier
             pretrained = opt.pretrained
         else:
             raise ValueError('model not supported')
@@ -31,6 +31,7 @@ class Net(Module):
         # weight = jt.ones(opt.num_classes, dtype='float32')
         # weight[:opt.num_classes // 2] = opt.inferior_weight
         # weight *= opt.num_classes / weight.sum()
+        self.optimizers = self.model.get_optimizers(opt.lr)
         self.loss = nn.CrossEntropyLoss()
 
         if opt.resume:
@@ -44,3 +45,26 @@ class Net(Module):
         else:
             loss = self.loss(pred, y)
             return pred, loss
+
+    def optimize_step(self, loss):
+        for optimizer in self.optimizers.values():
+            optimizer.zero_grad()
+        loss.backward()
+        for optimizer in self.optimizers.values():
+            optimizer.step()
+
+    def update_lrs(self):
+        new_lr_default = self.opt.lr['default'] * self.opt.lr_decay
+        self.update_lr('default', new_lr_default)
+
+        for name, lr in self.opt.lr.items():
+            if name == 'default':
+                continue
+            if self.opt.lr[name] >= new_lr_default:
+                self.update_lr(name, new_lr_default)
+
+    def update_lr(self, name, lr):
+        self.opt[name] = lr
+        for param_group in self.optimizers[name].param_groups:
+            param_group['lr'] = lr
+        self.log('Learning rate of {} updates to {}'.format(name, lr))

@@ -55,14 +55,7 @@ class Trainer:
             if opt.lr_decay_iter >= 0:
                 if self.total_iters >= opt.lr_decay_iter:
                     if (self.total_iters - opt.lr_decay_iter) % opt.lr_decay_freq == 0:
-                        self.update_lr(opt.lr * opt.lr_decay)
-
-            if opt.freeze_iters and self.total_iters >= opt.freeze_iters:
-                if self.model.model.extractor.unfreeze():
-                    self.log('Unfreeze the extractor.')
-                    if opt.lr_finetune:
-                        self.update_lr(opt.lr_finetune)
-
+                        self.model.update_lrs()
 
     def test(self, epoch_idx):
         self.model.eval()
@@ -92,12 +85,6 @@ class Trainer:
         self.iter_footprint['test'] += [self.total_iters]
 
         self.log('Test Epoch: {}, Average loss: {:.6f}, Accuracy: {:.6f}'.format(epoch_idx, total_loss, total_acc))
-
-    def update_lr(self, lr):
-        opt.lr = lr
-        for param_group in self.optimizer.param_groups:
-            param_group['lr'] = opt.lr
-        self.log('Learning rate updates to {}'.format(opt.lr))
 
     def save(self):
         model_dir = os.path.join(opt.checkpoint, opt.name, 'models')
