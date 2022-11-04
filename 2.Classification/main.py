@@ -13,11 +13,10 @@ from models import Net
 
 
 class Trainer:
-    def __init__(self, opt, total_iters, model, optimizer, loader, test_loader):
+    def __init__(self, opt, total_iters, model, loader, test_loader):
         self.opt = opt
         self.total_iters = total_iters
         self.model = model
-        self.optimizer = optimizer
         self.grad_clip = opt.use_gradient_clip
         self.loader = loader
         self.test_loader = test_loader
@@ -25,10 +24,6 @@ class Trainer:
         self.accs = {'train': [], 'test': []}
         self.iter_footprint = {'train': [], 'test': []}
         self.log_file = os.path.join(opt.checkpoint, opt.name, 'log.txt')
-
-        if opt.freeze_iters:
-            if self.model.model.extractor.freeze():
-                self.log('Freeze the extractor.')
 
     def train(self, epoch_idx):
         self.model.train()
@@ -38,7 +33,8 @@ class Trainer:
             self.total_iters += data.shape[0]
             num_iter += data.shape[0]
             pred, loss = self.model(data, label)
-            self.optimizer.step(loss)
+            self.model.optimizer.step(loss)
+
             acc = (pred.argmax(dim=1)[0] == label).float().mean()
 
             self.losses['train'] += [loss.item()]
@@ -143,9 +139,7 @@ def main():
     print('Loading the model...')
     model = Net(opt)
     total_iters = 0
-    optimizer = jt.optim.Adam(model.parameters(), lr=opt.lr, weight_decay=opt.weight_decay)
-
-    trainer = Trainer(opt, total_iters, model, optimizer, train_loader, test_loader)
+    trainer = Trainer(opt, total_iters, model, train_loader, test_loader)
 
     # Train & test the model
     print('Preparation done. Now start training.')

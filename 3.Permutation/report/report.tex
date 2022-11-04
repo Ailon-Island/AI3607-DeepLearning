@@ -112,25 +112,27 @@ numbers=left }}
 
 回顾对每张子图计算交叉熵损失并求和，有
 \[
-    H(p(x, \cdot), q(x, \cdot)) =  -\sum_y p(x, y) \ln q(x,y),
-\]
-\[
-    \sum_x H(p(x, \cdot), q(x, \cdot)) =  -\sum_x\sum_y p(x, y) \ln q(x,y) = H(p,q),
+    \begin{aligned}
+        &H(p(x, \cdot), q(x, \cdot)) =  -\sum_y p(x, y) \ln q(x,y),\\
+        &\sum_x H(p(x, \cdot), q(x, \cdot)) =  -\sum_x\sum_y p(x, y) \ln q(x,y) = H(p,q),
+    \end{aligned}
 \]
 因此，在双随机矩阵引入的（或假设的）概率先验下，直接计算每张子图的交叉熵损失并进行加和，就等价于计算联合分布的交叉熵，是符合概率学的损失函数定义方式。
 
 特别地，如果不进行和为一的归一化，损失函数的惩罚也可以引起正确预测“概率”的增长，得到较好的训练结果。在使用梯度性质不佳的归一化导致结果较差时，可以尝试放弃概率可解释性，直接使用未归一化的输出进行损失计算。此时得到的损失只具有训练过程中的相对意义。
 
 \section{使用预训练 Simple Extractor 的图片分类}
-由于图片尺寸和输出尺寸有不同，且模型的前部能够提取具有泛用能力的特征，而后部往往倾向于整合任务相关的特征，我选择只取用 Simple Extractor 的预训练参数，并对提取得到的特征使用新训练的神经网络进行处理分析。
+由于图片尺寸和输出尺寸有不同，且模型的前部能够提取具有泛用能力的特征，而后部往往倾向于整合任务相关的特征。因此只取用 Simple Extractor 的预训练参数，并用新训练的神经网络处理得到的特征。
 \subsection{网络结构}
 
-我选择了两种代表性的结构思路进行设计，第一种与作业三的网络结构更相似，第二种则更类似作业二的网络结构。
+我选择了两种代表性的结构思路进行设计，第一种与作业三的网络结构更相似，第二种则更类似作业二。
 \subsubsection{Patched Classifier}
 一种直接的想法是沿用作业三中的子图结构，从而保证预训练参数与数据之间的适应性，结构见图\ref{fig:3a}。这种结构不能完整地学习图片的全局信息，且在特征整合上也设计得较为简单，因此在分类任务中表现并不好。
 \subsubsection{Two-stage Classifier}
 另一种思路是直接将 Simple Extractor 前几层卷积层作为全图的卷积层使用，之后使用线性层直到最终输出预测，结构见图\ref{fig:3b}。这种方法的可行性在于尽管图片大小不同，卷积核相对于整张图片的尺度是在两个任务中不变的，因此原先用于处理子图的网络同样能用于处理整张图片。值得一提的是，在本结构中，对提取得到的特征没有采取升维操作，而是仿照 Simple Classifier 的网络结构设计了 $256-96-10$ 的逐步降维线性层。
 
+\subsection{对抗过拟合}
+模型过拟合，使用数据增强和权重衰减增加鲁棒性、泛化性，甚至测试未增强准确率高于训练准确率。
 
 \begin{figure}[H]
     \centering
@@ -147,38 +149,36 @@ numbers=left }}
 \end{figure}
 
 
-\subsection{对抗过拟合}
-训练过程中出现明显过拟合，亦可使用数据增强和 weight decay 来增加模型的鲁棒性、泛化性，甚至使得模型在未增强的测试集上的准确率高于训练准确率。
 
 \section{实验结果}
 实验结果如表 \ref{tab:1}, \ref{tab:2} 所示。有趣的是，与 DeepPermNet \cite{deeppermnet} 的结果不同，在本实验的设置下，不使用计算略复杂的 Sinkhorn 反而既提升了训练速度又提高了模型表现。在不必输出预测概率时，或许这是更好的选择。
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{cccccccccccccccc}
-        \hline
-        &\multicolumn{3}{c}{With Sinkhorn}&\multicolumn{7}{c}{Without Sinkhorn}\\
-        Model           &Pure&WD1&C+F.3&            Pure&WD.3&WD.5&WD1&WD3&WD5&WD6&WD7&WD10&C&C+F.3&C+F.3+WD1\\
-        \hline
-        Train Loss      &$0.7691$&$0.7865$&$0.8177 $&     $0.0038 $&$0.0097 $&$0.0140 $&$0.0254 $&$0.0675 $&$0.1133 $&$0.1348$&$0.1574$&$0.2268 $\\
-        Loss            &$0.8628$&$0.8731$&$0.8160 $&     $0.5168 $&$0.4064 $&$0.3741 $&$0.3314 $&$0.2809 $&$0.2689 $&$0.2691$&$0.2721$&$0.3273 $\\
-        Acc.            &$0.8802$&$0.8773$&$0.9317 $&     $0.8880 $&$0.8883 $&$0.8884 $&$0.8921 $&$0.8965 $&$0.8996 $&$0.9002$&$0.8994$&$0.8785 $\\
-        \hline
-    \end{tabular}
-    \caption{Result of our image concatenator in aid of anti-overfitting methods. WDX, C, and F.X stand for weight decay of $Xe-3$, random crop, and random flip with rate $0.X$, respectively. Train losses, test losses, and test accuracies are reported.}
+    \resizebox*{\linewidth}{!}{\begin{tabular}{cccccccccccccccc}
+        \toprule
+        &\multicolumn{3}{c}{With Sinkhorn}&\multicolumn{12}{c}{Without Sinkhorn}\\
+        Model           &Pure&WD1&C+F.3&            Pure&WD3&WD6&WD10&C&C+F.3&C+F.5&\shortstack{C+F.3\\+WD.1}&\shortstack{C+F.3\\+WD.5}&\shortstack{C+F.3\\+WD1}&\shortstack{C+F.3\\+WD3}&\shortstack{C+F.3\\+WD6}\\
+        \midrule
+        Train Loss      &$0.7691$&$0.7865$&$\mathbf{0.8177} $&     $0.0038 $&$0.0675 $&$0.1348$&$0.2268 $&$0.1315$&$\mathbf{0.1768}$&$0.1896$&$0.1758$&$0.1868$&$0.1892$&$0.2246$&$0.2603$\\
+        Loss            &$0.8628$&$0.8731$&$\mathbf{0.8160} $&     $0.5168 $&$0.2809 $&$0.2691$&$0.3273 $&$0.1880$&$\mathbf{0.1774}$&$0.1845$&$0.1803$&$0.1858$&$0.1881$&$0.2125$&$0.2409$\\
+        Acc.            &$0.8802$&$0.8773$&$\mathbf{0.9317} $&     $0.8880 $&$0.8965 $&$0.9002$&$0.8785 $&$0.9315$&$\mathbf{0.9351}$&$0.9325$&$0.9338$&$0.9320$&$0.9316$&$0.9255$&$0.9164$\\
+        \bottomrule
+    \end{tabular}}
+    \caption{Result of our image concatenator in aid of anti-overfitting methods. WDX, C, and F.X stand for weight decay of $Xe-3$, random crop, and random flip with rate $0.X$, respectively. Train losses, test losses, and test accuracies are reported. Best results are in \textbf{bold face}.}
     \label{tab:1}
 \end{table}
 
 \begin{table}[H]
     \centering
     \begin{tabular}{ccccccc}
-        \hline
+        \toprule
         &\multicolumn{2}{c}{From Scratch}&\multicolumn{2}{c}{Pretrained}&\multicolumn{2}{c}{Finetune}\\
         Model&Two-stage&Patched&Two-stage&Patched&Two-stage&Patched\\
-        \hline
+        \midrule
         Loss\\
         Acc.\\
-        \hline
+        \bottomrule
 
     \end{tabular}
     \caption{Result of classifiers with Simple Extractor on CIFAR-10. Weights from .}

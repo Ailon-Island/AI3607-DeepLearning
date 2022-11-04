@@ -84,7 +84,8 @@ class Options():
         )
         self.parser.add_argument(
             '--pretrained_dir',
-            default='utils/simple_extractor/pretrained_weights/iter_5000000.pkl',
+            # default='utils/simple_extractor/pretrained_weights/iter_5000000.pkl',
+            default='utils/simple_extractor/pretrained_weights/SimpleAug_0.3WeightDecay_0NSinkhorn.pkl',
             help='path to pretrained model'
         )
         self.parser.add_argument(
@@ -193,7 +194,7 @@ class Options():
                     for k, v in sorted(args.items()):
                         self.opt_file.write('%s: %s\n' % (str(k), str(v)))
                     self.opt_file.write('-------------- End ----------------\n')
-
+            self.opt.lr = {'default': self.opt.lr, 'extractor': self.opt.lr_extractor}
         return self.opt
 
 

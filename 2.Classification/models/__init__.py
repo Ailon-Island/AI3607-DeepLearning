@@ -11,6 +11,7 @@ class Net(Module):
     def __init__(self, opt):
         super(Net, self).__init__()
 
+        self.opt = opt
         pretrained = False
         if opt.model == 'resnet50':
             Model = ResNet50
@@ -31,12 +32,14 @@ class Net(Module):
         # weight = jt.ones(opt.num_classes, dtype='float32')
         # weight[:opt.num_classes // 2] = opt.inferior_weight
         # weight *= opt.num_classes / weight.sum()
-        self.optimizers = self.model.get_optimizers(opt.lr)
+        self.optimizer = self.model.get_optimizer(opt.lr, opt.weight_decay)
         self.loss = nn.CrossEntropyLoss()
 
         if opt.resume:
             model_file = os.path.join(opt.checkpoint, opt.name, 'models', 'latest.pth')
-            self.load(model_file)
+            if os.path.exists(model_file):
+                self.model.load(model_file)
+                print('Model loaded from {}.'.format(model_file))
 
     def execute(self, x, y=None):
         pred = self.model(x)
@@ -46,25 +49,11 @@ class Net(Module):
             loss = self.loss(pred, y)
             return pred, loss
 
-    def optimize_step(self, loss):
-        for optimizer in self.optimizers.values():
-            optimizer.zero_grad()
-        loss.backward()
-        for optimizer in self.optimizers.values():
-            optimizer.step()
-
     def update_lrs(self):
-        new_lr_default = self.opt.lr['default'] * self.opt.lr_decay
-        self.update_lr('default', new_lr_default)
-
         for name, lr in self.opt.lr.items():
-            if name == 'default':
-                continue
-            if self.opt.lr[name] >= new_lr_default:
-                self.update_lr(name, new_lr_default)
+            new_lr = lr * self.opt.lr_decay
+            self.opt.lr[name] = lr * self.opt.lr_decay
+            print("Learning rate of {} decay to {}".format(name, new_lr))
 
-    def update_lr(self, name, lr):
-        self.opt[name] = lr
-        for param_group in self.optimizers[name].param_groups:
-            param_group['lr'] = lr
-        self.log('Learning rate of {} updates to {}'.format(name, lr))
+        for param_group in self.optimizer.param_groups:
+            param_group['lr'] *= self.opt.lr_decay

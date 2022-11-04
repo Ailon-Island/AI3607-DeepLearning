@@ -11,6 +11,7 @@
 \usepackage{bm}         % 加粗方程字体
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{colortbl}
 \usepackage{tikz}%调用宏包tikz
 \usepackage{circuitikz}%调用宏包circuitikz
 \usepackage{enumerate}
@@ -125,12 +126,12 @@ REBA 数据集中存在大量重复样本，因此极其容易过拟合。此时
     \begin{table}[H]
         \centering
         \begin{tabular}{ccc}
-            \hline
+            \toprule
             Model&ResNet50&Simple\\
-            \hline
+            \midrule
             Loss& $\mathbf{0.5786}$&$0.6540$\\
             Acc.&$\mathbf{86.00\%}$&$78.20\%$\\
-            \hline
+            \bottomrule
             
         \end{tabular}
         \caption{Result of different models on CIFAR-10. Test losses and accuracies are reported.}
@@ -140,12 +141,12 @@ REBA 数据集中存在大量重复样本，因此极其容易过拟合。此时
     \begin{table}[H]
         \centering
         \begin{tabular}{cccc}
-            \hline
+            \toprule
             Variation&Original&IMBA&REBA\\
-            \hline
+            \midrule
             Loss&$0.6540$&$1.4708$&$1.7856$\\
             Acc.&$78.20\%$&$62.09\%$&$62.68\%$\\
-            \hline
+            \bottomrule
         \end{tabular}
         \caption{Result on variations of CIFAR-10 with Simple Classifier.}
         \label{tab:2}
@@ -160,16 +161,16 @@ REBA 数据集中存在大量重复样本，因此极其容易过拟合。此时
         \multicolumn{2}{c}{\threemetrics{Train\ Loss}{Test\ Loss}{Test\ Acc.}}&\multicolumn{5}{c}{ Augmentation}\\
         &&None&C&F.3+C&F.5+C&F.9+C\\
         \cline{3-7}
-        \multicolumn{1}{|c}{\multirow{9}{*}{\rotatebox{90}{Weight Decay}}}
-        &\multicolumn{1}{c|}{\multirow{2}{*}{$0$}}&
+        \multicolumn{1}{|c}{\multirow{7}{*}{\rotatebox{90}{Weight Decay}}}
+        &\multicolumn{1}{c|}{\multirow{3}{*}{$0$}}&
         \threemetrics{0.1198}{2.7436}{57.57\%}&\threemetrics{0.5312}{1.3350}{60.60\%}&\threemetrics{0.7723}{1.1128}{63.38\%}&\threemetrics{0.8797}{1.1291}{61.61\%}&\multicolumn{1}{c|}{\threemetrics{0.8810}{1.3040}{55.70\%}}\\
         \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
-        \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
+        % \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
         \multicolumn{1}{|c}{}
         &\multicolumn{1}{c|}{\multirow{3}{*}{$1e-3$}}&
         \threemetrics{0.0263}{1.7856}{62.68\%}&\threemetrics{0.1329}{1.3967}{66.66\%}&\threemetrics{0.3496}{1.0275}{69.99\%}&\threemetrics{0.6150}{0.9844}{66.67\%}&\multicolumn{1}{c|}{\threemetrics{0.4338}{1.1705}{64.12\%}}\\
         \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
-        \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
+        % \multicolumn{1}{|c}{}&\multicolumn{1}{c|}{}&&&&&\multicolumn{1}{c|}{}\\
         \multicolumn{1}{|c}{}
         &\multicolumn{1}{c|}{\multirow{3}{*}{$1e-2$}}&
         \threemetrics{0.8659}{1.1954}{64.73\%}&\threemetrics{0.4323}{0.9248}{69.04\%}&\threemetrics{0.6833}{\mathbf{0.8616}}{\mathbf{70.40\%}}&\threemetrics{0.8101}{0.9221}{67.84\%}&\multicolumn{1}{c|}{\threemetrics{0.8659}{1.1295}{59.05\%}}
