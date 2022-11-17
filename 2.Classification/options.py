@@ -98,6 +98,12 @@ class Options():
             type=int,
             default=1,
         )
+        self.parser.add_argument(
+            '--save_latest_only',
+            action='store_true',
+            default=True,
+            help='toggle saving latest checkpoint only'
+        )
 
         # training
         self.parser.add_argument(
@@ -121,7 +127,7 @@ class Options():
         self.parser.add_argument(
             '--lr_extractor',
             type=float,
-            default=3e-4,
+            default=1e-2,
             help='learning rate for extractor'
         )
         self.parser.add_argument(

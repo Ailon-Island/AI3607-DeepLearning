@@ -153,6 +153,8 @@ numbers=left }}
 \section{实验结果}
 实验结果如表 \ref{tab:1}, \ref{tab:2} 所示。有趣的是，与 DeepPermNet \cite{deeppermnet} 的结果不同，在本实验的设置下，不使用计算略复杂的 Sinkhorn 反而既提升了训练速度又提高了模型表现。在不必输出预测概率时，或许这是更好的选择。
 
+对于将拼图作为分类的预训练任务，预训练后得到的结果更稳定，收敛更快。同时由于模型训练使用的学习率不同，使用更接近预训练时学习率的 finetuning 学习率效果最好。
+
 \begin{table}[H]
     \centering
     \resizebox*{\linewidth}{!}{\begin{tabular}{cccccccccccccccc}
@@ -162,26 +164,26 @@ numbers=left }}
         \midrule
         Train Loss      &$0.7691$&$0.7865$&$\mathbf{0.8177} $&     $0.0038 $&$0.0675 $&$0.1348$&$0.2268 $&$0.1315$&$\mathbf{0.1768}$&$0.1896$&$0.1758$&$0.1868$&$0.1892$&$0.2246$&$0.2603$\\
         Loss            &$0.8628$&$0.8731$&$\mathbf{0.8160} $&     $0.5168 $&$0.2809 $&$0.2691$&$0.3273 $&$0.1880$&$\mathbf{0.1774}$&$0.1845$&$0.1803$&$0.1858$&$0.1881$&$0.2125$&$0.2409$\\
-        Acc.            &$0.8802$&$0.8773$&$\mathbf{0.9317} $&     $0.8880 $&$0.8965 $&$0.9002$&$0.8785 $&$0.9315$&$\mathbf{0.9351}$&$0.9325$&$0.9338$&$0.9320$&$0.9316$&$0.9255$&$0.9164$\\
+        Acc.            &$88.02\%$&$87.73\%$&$\mathbf{93.17\%} $&     $88.80\% $&$89.65\% $&$90.02\%$&$87.85\% $&$93.15\%$&$\mathbf{93.51\%}$&$93.25\%$&$93.38\%$&$93.20\%$&$93.16\%$&$92.55\%$&$91.64\%$\\
         \bottomrule
     \end{tabular}}
-    \caption{Result of our image concatenator in aid of anti-overfitting methods. WDX, C, and F.X stand for weight decay of $Xe-3$, random crop, and random flip with rate $0.X$, respectively. Train losses, test losses, and test accuracies are reported. Best results are in \textbf{bold face}.}
+    \caption{Result of our image concatenator in aid of anti-overfitting methods. WDX, C, and F.X stand for weight decay of $Xe-3$, random crop, and random flip with rate $0.X$, respectively. Train losses, test losses, and test accuracies are reported.}
     \label{tab:1}
 \end{table}
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{ccccccc}
+    \resizebox*{\linewidth}{!}{\begin{tabular}{cccccccc}
         \toprule
-        &\multicolumn{2}{c}{From Scratch}&\multicolumn{2}{c}{Pretrained}&\multicolumn{2}{c}{Finetune}\\
-        Model&Two-stage&Patched&Two-stage&Patched&Two-stage&Patched\\
+        &\multicolumn{3}{c}{From Scratch}&\multicolumn{2}{c}{Pretrained}&\multicolumn{2}{c}{Finetune}\\
+        Model&Simple/LR12/LR3/LRD.5&Two-stage/LR12/LR3+LRE12/LR3&Patched/LR3/LR3+LRE.75&Two-stage/LR12/LR3&Patched/LR3&Two-stage/LR12/LR3+LRE12/LR3&Patched/LR3\\
         \midrule
-        Loss\\
-        Acc.\\
+        Loss&$0.8291/0.8168/0.8335/0.6540$&$0.7020/0.7251/\mathbf{0.6365}/0.7041$&$0.9554/1.2631/1.2279$&$1.0021/0.8799/\mathbf{0.7977}$&$1.2285/1.0952$&$0.7633/0.7123/\underline{\mathbf{0.6159}}/0.6814$&$1.3107/1.2700$\\
+        Acc.&$78.15\%/78.49\%/75.46\%/78.20\%$&$\underline{\mathbf{80.20\%}}/78.49\%/79.15\%/77.06\%$&$69.04\%/69.99\%/68.41\%$&$69.64\%/72.64\%/\mathbf{72.94\%}$&$56.41\%/61.20\%$&$\mathbf{79.45\%}/\mathbf{79.44\%}/\mathbf{79.37\%}/78.04\%$&$52.43\%/71.27\%$\\
         \bottomrule
 
-    \end{tabular}
-    \caption{Result of classifiers with Simple Extractor on CIFAR-10. Weights from .}
+    \end{tabular}  }  
+    \caption{Result of classifiers with Simple Extractor on CIFAR-10. Pretrained weights from "C+F.3 without Sinkhorn". LDR.X, LRX, and LREX stands for learning rate decay of $0.X$, learning rate of $Xe-4$, and extractor learning rate of $Xe-4$, respecively.}
     \label{tab:2}
 \end{table}
 
@@ -190,6 +192,6 @@ numbers=left }}
 
 学习率 $3e-4$ 衰减 $0.8$。不使用 weight decay。batch size $1024$，共训练 $5,000,000$ 迭代。从第 $50,000$ 次起每 $200,000$ 次迭代学习率衰减。数据增强不启用；若启用，方式为随机翻转和随机裁剪。
 
-对分类任务：学习率 $1e-2$ 衰减 $0.5$。weight decay $1e-3$。
+对分类任务：学习率 $1e-2$ 衰减 $0.8$。weight decay $1e-3$。
 
 \end{document}

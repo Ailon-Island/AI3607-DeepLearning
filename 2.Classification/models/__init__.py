@@ -19,7 +19,7 @@ class Net(Module):
             Model = SimpleClassifier
         elif opt.model == 'patched_classifier':
             Model = PatchedClassifier
-            pretrained = opt.pretrainedj
+            pretrained = opt.pretrained
         elif opt.model == 'two_stage_classifier':
             Model = TwoStageClassifier
             pretrained = opt.pretrained
@@ -53,7 +53,8 @@ class Net(Module):
         for name, lr in self.opt.lr.items():
             new_lr = lr * self.opt.lr_decay
             self.opt.lr[name] = lr * self.opt.lr_decay
-            print("Learning rate of {} decay to {}".format(name, new_lr))
+            if name == 'default' or name in self.model.components:
+                print("Learning rate of {} decay to {}".format(name, new_lr))
 
         for param_group in self.optimizer.param_groups:
             param_group['lr'] *= self.opt.lr_decay

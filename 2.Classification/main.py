@@ -87,7 +87,8 @@ class Trainer:
         if not os.path.exists(model_dir):
             os.mkdir(model_dir)
         model_dir = os.path.join(model_dir)
-        self.model.save(os.path.join(model_dir, 'iter_{}.pth'.format(self.total_iters)))
+        if not opt.save_latest_only:
+            self.model.save(os.path.join(model_dir, 'iter_{}.pth'.format(self.total_iters)))
         self.model.save(os.path.join(model_dir, 'latest.pth'))
         self.log('Model saved to {}'.format(os.path.join(model_dir, 'iter_{}.pth'.format(self.total_iters))))
 
